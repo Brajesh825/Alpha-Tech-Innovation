@@ -444,14 +444,17 @@ a:hover {
     top: 0;
     left: 0;
     width: 100%;
+    height: 4rem;
     z-index: 1000;
     padding: var(--padding-sm) var(--padding);
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 .navbar-logo {
+    border-radius: 0.5rem;
+    width: 4rem;
+    height: 4rem;
     font-size: 1.5rem;
     text-transform: var(--text-transform-uppercase);
 }
@@ -490,7 +493,7 @@ a:hover {
 }
 
 .navbar-menu a:hover {
-    background-color: rgba(0, 217, 255, 0.1); /* Add hover background color */
+    color: #b8dcff;
 }
 
 /* Hamburger Button Styles */
@@ -547,8 +550,8 @@ a:hover {
 
 .theme-swap-btn {
     position: fixed;
-    top: 10px;
-    right: 20px;
+    top: 1.5rem;
+    right: 2rem;
     z-index: 1000;
     padding: var(--padding-xs) var(--padding-sm); /* Adjust padding for smaller screens */
     background-color: var(--primary-background-color);
@@ -575,3 +578,23 @@ a:hover {
 }
 
 
+/* CSS for Logo on Mobile Devices */
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        right: 3rem;
+        margin-right: 10px; /* Adjust margin as needed */
+    }
+
+    .theme-swap-btn {
+        top: 1.5rem;
+        right: 8rem;
+    }
+}

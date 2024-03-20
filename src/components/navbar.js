@@ -1,4 +1,4 @@
-function Navbar(navData) {
+function Navbar(navData, logoSrc) {
     const navbar = document.createElement('nav');
     navbar.setAttribute('id', 'navbar');
     navbar.classList.add('navbar');
@@ -13,6 +13,13 @@ function Navbar(navData) {
     `;
     navbar.appendChild(hamburgerBtn);
 
+    // Create logo
+    const logo = document.createElement('img');
+    logo.setAttribute('src', "./logo.png");
+    logo.setAttribute('alt', 'Logo');
+    logo.classList.add('navbar-logo');
+    navbar.appendChild(logo);
+
     // Create menu ul
     const ul = document.createElement('ul');
     ul.classList.add('navbar-menu');
@@ -23,6 +30,9 @@ function Navbar(navData) {
         const a = document.createElement('a');
         a.setAttribute('href', item.link);
         a.textContent = item.navItem;
+        a.addEventListener('click', (event) => {
+            event.preventDefault();
+        });
         li.appendChild(a);
         ul.appendChild(li);
     });

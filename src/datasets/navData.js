@@ -1,10 +1,10 @@
 
 const navData = [
-    { navItem: 'Home', link: '#' },
-    { navItem: 'About Us', link: '#' },
-    { navItem: 'About RPO Services', link: '#' },
-    { navItem: 'Industries', link: '#' },
-    { navItem: 'Contact Us', link: '#' }
+    { navItem: 'HOME', link: '' },
+    { navItem: 'ABOUT US', link: '' },
+    { navItem: 'ABOUT RPO SERVICES', link: '' },
+    { navItem: 'INDUSTRIES', link: '' },
+    { navItem: 'CONTACT US', link: '' }
 ];
 
 export default navData
