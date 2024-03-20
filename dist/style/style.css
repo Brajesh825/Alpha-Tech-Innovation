@@ -1,4 +1,9 @@
 :root {
+
+     /* common */
+     --nav-text-color: #ffffff;
+     --nav-background-color: #333333;
+
     /* Light Theme */
     --primary-text-color-light: #333;
     --secondary-text-color-light: #555;
@@ -406,4 +411,117 @@ a:hover {
 .tertiary-grid-item {
     height: 200px;
     width: 300px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--nav-background-color);
+    color: var(--nav-text-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: var(--padding-sm) var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    text-transform: var(--text-transform-uppercase);
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    list-style-type: none;
+    margin-left: var(--spacing-md);
+}
+
+.navbar-menu a {
+    color:  inherit;
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    transition: color 0.3s ease;
+    padding: var(--spacing-sm) var(--spacing-md); /* Add padding to improve clickable area */
+    border-radius: var(--border-radius); /* Add border-radius for a softer look */
+}
+
+.navbar-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Add hover background color */
+}
+
+/* Hamburger Button Styles */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-btn .line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* Media Query for Responsive Navbar */
+@media only screen and (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .navbar.active .navbar-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        background-color: #333;
+        width: 100%;
+        left: 0;
+        padding: 10px 20px;
+    }
+
+    .navbar.active .navbar-menu ul {
+        margin-top: 10px;
+    }
+
+    .navbar.active .navbar-menu li {
+        margin-left: 0;
+    }
+}
+
+.theme-swap-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: var(--padding-sm) var(--padding);
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    border: 1px solid var(--nav-text-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.theme-swap-btn:hover {
+    background-color: var(--secondary-background-color);
+    color: var(--secondary-text-color); 
+    border-color: var(--nav-text-color);
 }
