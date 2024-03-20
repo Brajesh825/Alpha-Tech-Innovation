@@ -563,6 +563,8 @@ a:hover {
     font-size: var(--font-size-sm); /* Adjust font size for smaller screens */
 }
 
+
+
 .theme-swap-btn:hover {
     background-color: var(--secondary-background-color);
     color: var(--secondary-text-color); 
@@ -596,5 +598,6 @@ a:hover {
     .theme-swap-btn {
         top: 1.5rem;
         right: 8rem;
+        display: none;
     }
 }
