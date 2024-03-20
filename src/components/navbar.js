@@ -32,6 +32,7 @@ function Navbar(navData) {
     // Hamburger button click event to toggle menu
     hamburgerBtn.addEventListener('click', () => {
         navbar.classList.toggle('active');
+        ul.classList.toggle('active');
     });
 
     // Create theme change button
