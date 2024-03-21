@@ -270,6 +270,30 @@
     }
 }
 
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 0.95;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Animation for sliding navbar menu to the left */
 @keyframes slideOutToLeft {
     from {
@@ -491,6 +515,8 @@ a:hover {
     height: 4rem;
     font-size: 1.5rem;
     text-transform: var(--text-transform-uppercase);
+    animation: slideInFromTop 1s ease;
+
 }
 
 .navbar-menu {
@@ -715,6 +741,7 @@ a:hover {
 .hero-content-right {
     right: 0;
     opacity: 0.95;
+    animation: slideInFromRight 1s ease;
 }
 
 @media (max-width: 576px) {
