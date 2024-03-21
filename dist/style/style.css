@@ -1,8 +1,8 @@
 :root {
 
-     /* common */
-     --nav-text-color: #ffffff;
-     --nav-background-color: #333333;
+    /* common */
+    --nav-text-color: #ffffff;
+    --nav-background-color: #333333;
 
     /* Light Theme */
     --primary-text-color-light: #333;
@@ -233,11 +233,14 @@
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: scale(0.95); /* Initial scale slightly smaller */
+        transform: scale(0.95);
+        /* Initial scale slightly smaller */
     }
+
     to {
         opacity: 1;
-        transform: scale(1); /* Full scale */
+        transform: scale(1);
+        /* Full scale */
     }
 }
 
@@ -246,11 +249,28 @@
         opacity: 0;
         transform: translateX(-100%);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
     }
 }
+
+/* Animation for sliding navbar menu to the left */
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0);
+        /* Start from original position */
+    }
+
+    to {
+        transform: translateX(-100%);
+        /* Slide to the left */
+        display: none;
+        /* Ensure the menu remains hidden after sliding */
+    }
+}
+
 
 
 /* Common Styles */
@@ -462,13 +482,15 @@ a:hover {
 .navbar-menu {
     display: flex;
     align-items: center;
-    overflow: hidden; /* Hide overflow content when collapsed */
+    overflow: hidden;
+    /* Hide overflow content when collapsed */
     animation: fadeIn 1s ease;
 
 }
 
 .navbar-menu.active {
-    max-height: 500px; /* Adjust max-height based on menu content */
+    max-height: 500px;
+    /* Adjust max-height based on menu content */
 }
 
 .navbar-menu ul {
@@ -484,12 +506,14 @@ a:hover {
 }
 
 .navbar-menu a {
-    color:  inherit;
+    color: inherit;
     text-decoration: none;
     font-weight: var(--font-weight-bold);
     transition: color 0.3s ease;
-    padding: var(--spacing-sm) var(--spacing-md); /* Add padding to improve clickable area */
-    border-radius: var(--border-radius); /* Add border-radius for a softer look */
+    padding: var(--spacing-sm) var(--spacing-md);
+    /* Add padding to improve clickable area */
+    border-radius: var(--border-radius);
+    /* Add border-radius for a softer look */
 }
 
 .navbar-menu a:hover {
@@ -509,7 +533,6 @@ a:hover {
     background-color: #fff;
     margin: 3px 0;
 }
-
 
 
 /* Media Query for Responsive Navbar */
@@ -536,6 +559,20 @@ a:hover {
         animation: slideInFromLeft 0.5s ease;
     }
 
+    .navbar.inactive .navbar-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 20px;
+        animation: slideOutToLeft 0.5s ease forwards;
+    }
+
+
     .navbar.active .navbar-menu ul {
         margin-top: 10px;
     }
@@ -553,32 +590,33 @@ a:hover {
     top: 1.5rem;
     right: 2rem;
     z-index: 1000;
-    padding: var(--padding-xs) var(--padding-sm); /* Adjust padding for smaller screens */
+    padding: var(--padding-xs) var(--padding-sm);
+    /* Adjust padding for smaller screens */
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
     border: 1px solid var(--nav-text-color);
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    font-size: var(--font-size-sm); /* Adjust font size for smaller screens */
+    font-size: var(--font-size-sm);
+    /* Adjust font size for smaller screens */
 }
-
-
 
 .theme-swap-btn:hover {
     background-color: var(--secondary-background-color);
-    color: var(--secondary-text-color); 
+    color: var(--secondary-text-color);
     border-color: var(--nav-text-color);
 }
 
 /* Media Query for Small Devices (576px and below) */
 @media (max-width: var(--breakpoint-sm)) {
     .theme-swap-btn {
-        padding: var(--padding-xs); /* Adjust padding for smaller screens */
-        font-size: var(--font-size-xs); /* Adjust font size for smaller screens */
+        padding: var(--padding-xs);
+        /* Adjust padding for smaller screens */
+        font-size: var(--font-size-xs);
+        /* Adjust font size for smaller screens */
     }
 }
-
 
 /* CSS for Logo on Mobile Devices */
 @media screen and (max-width: 768px) {
@@ -592,7 +630,8 @@ a:hover {
     .navbar-logo {
         position: absolute;
         right: 3rem;
-        margin-right: 10px; /* Adjust margin as needed */
+        margin-right: 10px;
+        /* Adjust margin as needed */
     }
 
     .theme-swap-btn {

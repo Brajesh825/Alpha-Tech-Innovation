@@ -15,7 +15,7 @@ function Navbar(navData, logoSrc) {
 
     // Create logo
     const logo = document.createElement('img');
-    logo.setAttribute('src', "./logo.png");
+    logo.setAttribute('src', "./logo/logo.png");
     logo.setAttribute('alt', 'Logo');
     logo.classList.add('navbar-logo');
     navbar.appendChild(logo);
@@ -41,8 +41,17 @@ function Navbar(navData, logoSrc) {
 
     // Hamburger button click event to toggle menu
     hamburgerBtn.addEventListener('click', () => {
-        navbar.classList.toggle('active');
-        ul.classList.toggle('active');
+        if (navbar.classList.contains('active')) {
+            navbar.classList.remove('active');
+            ul.classList.remove('active');
+            navbar.classList.add('inactive');
+            ul.classList.add('inactive');
+        } else {
+            navbar.classList.remove('inactive');
+            ul.classList.remove('inactive');
+            navbar.classList.add('active');
+            ul.classList.add('active');
+        }
     });
 
     // Create theme change button
