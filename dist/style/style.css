@@ -244,6 +244,20 @@
     }
 }
 
+@keyframes fadeInBG {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+        /* Initial scale slightly smaller */
+    }
+
+    to {
+        opacity: 0.12;
+        transform: scale(1);
+    }
+}
+
+
 @keyframes slideInFromLeft {
     from {
         opacity: 0;
@@ -533,7 +547,7 @@ a:hover {
 
 
 /* Media Query for Responsive Navbar */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 993px) {
     .navbar-menu {
         display: none;
     }
@@ -652,4 +666,190 @@ a:hover {
         right: 8rem;
         display: none;
     }
+}
+
+
+.hero {
+    margin-top: 6rem;
+    position: relative;
+    display: flex;
+    height: calc( 100vh - 5rem ) ;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%; /* Each content div takes half of the width */
+    background-size: cover; /* Ensure background images cover their containers */
+    background-position: center; /* Center the background images */
+}
+
+.hero-content-left {
+    display: flex;
+    left: 0;
+    background: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hero-content-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background-image: url('/image/sillhoute.jpg');
+    background-size: cover;
+    background-position: -20% 50%;
+    opacity: 0.12; /* Adjust opacity as needed */
+    z-index: -1;
+    animation: fadeInBG 1s ease;
+}
+
+
+.hero-content-right {
+    right: 0;
+    opacity: 0.95;
+}
+
+@media (max-width: 576px) {
+    .hero {
+        margin-top: 5rem;
+    }
+    .hero-content-left {
+        width: 100%;
+    }
+    .hero-content-left::before{
+        background-position: 35% 50%; /* Adjust as needed */
+        width: 100vw;
+    }
+    .hero-content-right {
+        display: none;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .hero {
+        margin-top: 5rem;
+    }
+    .hero-content-left {
+        width: 100%;
+    }
+    .hero-content-left::before{
+        background-position: 30% 50%; /* Adjust as needed */
+        width: 100vw;
+    }
+    .hero-content-right {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .hero {
+        margin-top: 5rem;
+    }
+
+    .hero-content-left {
+        width: 100%;
+        background-position: 8% 50%; /* Adjust as needed */
+    }
+
+    .hero-content-left::before{
+        background-position: 30% 50%; /* Adjust as needed */
+        width: 100vw;
+    }
+
+
+    .hero-content-right {
+        display: none;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .hero {
+        margin-top: 5rem;
+    }
+
+    .hero-content-left {
+        width: 100%;
+    }
+
+    .hero-content-left::before{
+        background-position: 8% 50%; /* Adjust as needed */
+        width: 100vw;
+    }
+
+    .hero-content-right {
+        display: none;
+    }
+}
+
+@media (min-width: 1201px) {
+    .hero-content-left::before{
+        background-position: -5% 50%; /* Adjust as needed */
+        width: 50vw;
+    }
+}
+
+
+/* Additional styles for content inside hero-content */
+.hero-content-left .content,
+.hero-content-right .content {
+    padding: 20px; /* Example padding for content */
+    color: #fff; /* Example text color */
+}
+
+.text-container {
+    animation: slideInFromLeft 2s ease;
+    padding: 20px; /* Add padding as needed */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    border: 1px solid rgb(242, 250, 242);
+    border-radius: 8px; /* Example border radius */
+    margin-right: 64px; /* Adjust to create space between the container and the right side */
+}
+
+.text-container {
+    padding: var(--padding-md); /* Use the desired padding size */
+    box-sizing: border-box;
+    border-radius: var(--border-radius); /* Use the border radius */
+    margin-right: 64px; /* Adjust as needed */
+}
+
+.text-container h1 {
+    font-size: var(--font-size-xl); /* Example font size for title */
+    margin-bottom: var(--spacing-md); /* Example margin bottom for title */
+    color: var(--primary-text-color); /* Apply primary text color */
+}
+
+.text-container h2 {
+    font-size: var(--font-size-lg); /* Example font size for subtitle */
+    margin-bottom: var(--spacing-lg); /* Example margin bottom for subtitle */
+    color: var(--primary-text-color); /* Apply primary text color */
+}
+
+.text-container p {
+    font-size: var(--font-size-md); /* Example font size for description */
+    line-height: var(--line-height-body); /* Example line height for description */
+    margin-bottom: var(--spacing-xl); /* Example margin bottom for description */
+    color: var(--primary-text-color); /* Apply primary text color */
+}
+
+.text-container button {
+    padding: var(--padding-sm) var(--padding-lg); /* Example padding for button */
+    font-size: var(--font-size-md); /* Example font size for button */
+    background-color: var(--accent-color); /* Example background color for button */
+    color: var(--primary-text-color); /* Example text color for button */
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.text-container button:hover {
+    background-color: darken(var(--accent-color), 10%); /* Darken the button color on hover */
 }
