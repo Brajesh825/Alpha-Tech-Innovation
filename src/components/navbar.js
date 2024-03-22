@@ -78,6 +78,13 @@ function Navbar(navData, logoSrc) {
         document.body.classList.toggle('dark-theme'); // Assuming toggling a class on body for theme change
     });
 
+    let luck = Math.round(Math.random());
+    if(luck){
+        document.body.classList.toggle('dark-theme'); // Assuming toggling a class on body for theme change
+    }
+
+
+
     return navbar;
 }
 
