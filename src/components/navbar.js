@@ -31,6 +31,19 @@ function Navbar(navData, logoSrc) {
         const a = document.createElement('a');
         a.setAttribute('href', item.link);
         a.textContent = item.navItem;
+        a.addEventListener('click', () => {
+            if (navbar.classList.contains('active')) {
+                navbar.classList.remove('active');
+                ul.classList.remove('active');
+                navbar.classList.add('inactive');
+                ul.classList.add('inactive');
+            } else {
+                navbar.classList.remove('inactive');
+                ul.classList.remove('inactive');
+                navbar.classList.add('active');
+                ul.classList.add('active');
+            }
+        });
         li.appendChild(a);
         ul.appendChild(li);
     });
@@ -51,19 +64,7 @@ function Navbar(navData, logoSrc) {
         }
     });
 
-    ul.addEventListener('click', () => {
-        if (navbar.classList.contains('active')) {
-            navbar.classList.remove('active');
-            ul.classList.remove('active');
-            navbar.classList.add('inactive');
-            ul.classList.add('inactive');
-        } else {
-            navbar.classList.remove('inactive');
-            ul.classList.remove('inactive');
-            navbar.classList.add('active');
-            ul.classList.add('active');
-        }
-    });
+
 
 
     // Create theme change button
