@@ -1,3 +1,4 @@
+
 function Navbar(navData, logoSrc) {
     const navbar = document.createElement('nav');
     navbar.setAttribute('id', 'navbar');
@@ -30,16 +31,12 @@ function Navbar(navData, logoSrc) {
         const a = document.createElement('a');
         a.setAttribute('href', item.link);
         a.textContent = item.navItem;
-        a.addEventListener('click', (event) => {
-            event.preventDefault();
-        });
         li.appendChild(a);
         ul.appendChild(li);
     });
 
     navbar.appendChild(ul);
 
-    // Hamburger button click event to toggle menu
     hamburgerBtn.addEventListener('click', () => {
         if (navbar.classList.contains('active')) {
             navbar.classList.remove('active');
@@ -53,6 +50,21 @@ function Navbar(navData, logoSrc) {
             ul.classList.add('active');
         }
     });
+
+    ul.addEventListener('click', () => {
+        if (navbar.classList.contains('active')) {
+            navbar.classList.remove('active');
+            ul.classList.remove('active');
+            navbar.classList.add('inactive');
+            ul.classList.add('inactive');
+        } else {
+            navbar.classList.remove('inactive');
+            ul.classList.remove('inactive');
+            navbar.classList.add('active');
+            ul.classList.add('active');
+        }
+    });
+
 
     // Create theme change button
     const themeSwapBtn = document.createElement('button');

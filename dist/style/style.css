@@ -618,7 +618,7 @@ a:hover {
 
     .navbar.active .navbar-menu li {
         width: 80vw;
-        margin-left: 0;
+        margin: 1rem;
     }
 
     .navbar.active .navbar-menu a {
@@ -634,6 +634,35 @@ a:hover {
     .navbar.active .navbar-menu a:hover {
         background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
     }
+
+    .navbar-menu li {
+        /* Existing styles */
+        border-radius: 0.25rem;
+        list-style-type: none;
+        margin-left: var(--spacing-md);   
+        padding: 10px 20px; /* Padding for spacing */
+        border: 2px solid #fff; /* Border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    }
+    
+    .navbar-menu li:hover {
+        background-color: #4d4270; /* Darker background color on hover */
+        transform: translateY(-2px); /* Move button slightly upwards on hover */
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover for depth */
+    }
+    
+    .navbar-menu a {
+        /* Existing styles */
+        color: inherit;
+        text-decoration: none;
+        font-weight: var(--font-weight-bold);
+        transition: color 0.3s ease;
+        /* Remove padding and border radius as they are now applied to the li element */
+        /* padding: var(--spacing-sm) var(--spacing-md); */
+        /* border-radius: var(--border-radius); */
+    }
+    
 
 
 }

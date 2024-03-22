@@ -1,4 +1,4 @@
-function Hero(heroContent) {
+function HeroAlpha(heroContent) {
 
     const { bgImageLeft, bgImageRight, heroTitle, heroSubtitle, heroDescription, heroButtonText } = heroContent;
 
@@ -49,4 +49,4 @@ function Hero(heroContent) {
     return heroSection;
 }
 
-export default Hero;
+export default HeroAlpha;

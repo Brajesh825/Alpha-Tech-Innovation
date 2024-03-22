@@ -7,5 +7,4 @@ module.exports = {
     filename: 'app.bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  watch: true, // Enable watch mode
 };
