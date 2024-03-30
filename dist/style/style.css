@@ -277,7 +277,7 @@
     }
 
     to {
-        opacity: 0.95;
+        opacity: 0.15;
         transform: translateX(0);
     }
 }
@@ -771,7 +771,7 @@ a:hover {
 
 .hero-content-right {
     right: 0;
-    opacity: 0.95;
+    opacity: 0.15;
     animation: slideInFromRight 1s ease;
 }
 
@@ -864,18 +864,11 @@ a:hover {
 
 .text-container {
     animation: slideInFromLeft 2s ease;
-    padding: 20px; /* Add padding as needed */
-    box-sizing: border-box; /* Ensure padding is included in width calculation */
     border: 1px solid rgb(242, 250, 242);
-    border-radius: 8px; /* Example border radius */
     margin-right: 64px; /* Adjust to create space between the container and the right side */
-}
-
-.text-container {
     padding: var(--padding-md); /* Use the desired padding size */
     box-sizing: border-box;
     border-radius: var(--border-radius); /* Use the border radius */
-    margin-right: 64px; /* Adjust as needed */
 }
 
 .text-container h1 {
@@ -910,4 +903,44 @@ a:hover {
 
 .text-container button:hover {
     background-color: darken(var(--accent-color), 10%); /* Darken the button color on hover */
+}
+
+/* mission.css */
+
+.mission {
+    padding: var(--padding-lg) 0;
+    text-align: center;
+    position: relative;
+}
+
+.mission-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission .text-container {
+    margin-right: 0;
+    max-width: 85vw;
+}
+
+.mission::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+    background-image: url('/image/mission-bg.jpg');
+    background-size: cover;
+    background-position: -20% 50%;
+    opacity: 0.12; /* Adjust opacity as needed */
+    z-index: -1;
+    animation: fadeInBG 1s ease;
+}
+
+@media (max-width: 768px) {
+    .mission::before {
+        height: 70vh;
+    }
 }
