@@ -11,6 +11,10 @@ import { industryHeroData } from "../datasets/industryData";
 import { contactUsHeroData } from "../datasets/contactUsData";
 import Mission from "../components/mission";
 import missionData from "../datasets/missionData";
+import ServiceHomeHeroIntro from "../components/serviceHomeHeroIntro";
+import serviceHomeHeroIntroData from "../datasets/serviceHomeHeroIntroData";
+import ServiceHomeCards from "../components/serviceHomeCards";
+import serviceHomeCardsData from "../datasets/serviceHomeCardsData";
 
 function createContainer() {
     const container = document.createElement('div');
@@ -35,7 +39,9 @@ function homeHandler() {
     const container = clearContent();
     const components = [
         HeroAlpha(homeHeroData),
-        Mission(missionData)
+        Mission(missionData),
+        ServiceHomeHeroIntro(serviceHomeHeroIntroData),
+        ServiceHomeCards(serviceHomeCardsData)
     ];
     components.forEach(component => container.appendChild(component));
 }

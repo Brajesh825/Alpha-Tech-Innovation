@@ -944,3 +944,106 @@ a:hover {
         height: 70vh;
     }
 }
+
+.service-home-hero-intro {
+    padding: 50px 20px;
+    background-color: var(--primary-background-color);
+    text-align: center;
+}
+
+.service-home-hero-intro .text-container {
+    animation: slideInFromLeft 2s ease; /* Animation from previous CSS */
+    border: 1px solid rgb(242, 250, 242);
+    margin-right: 64px; /* Adjust to create space between the container and the right side */
+    padding: var(--padding-md); /* Use the desired padding size */
+    box-sizing: border-box;
+    border-radius: var(--border-radius); /* Use the border radius */
+    max-width: 85vw;
+    width: 50rem;
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+
+/* Extra Large Devices (Large Desktops, 1200px and Up) */
+@media (min-width: 1200px) {
+    .service-home-hero-intro .text-container {
+        width: 80rem;
+    }
+}
+
+
+.service-home-hero-intro .text-container h1 {
+    font-size: var(--font-size-xl); /* Example font size for title */
+    margin-bottom: var(--spacing-md); /* Example margin bottom for title */
+    color: var(--primary-text-color); /* Apply primary text color */
+}
+
+.service-home-hero-intro .text-container h2 {
+    font-size: var(--font-size-lg); /* Example font size for subtitle */
+    margin-bottom: var(--spacing-lg); /* Example margin bottom for subtitle */
+    color: var(--primary-text-color); /* Apply primary text color */
+}
+
+.service-home-hero-intro .text-container p {
+    font-size: var(--font-size-md); /* Example font size for description */
+    line-height: var(--line-height-body); /* Example line height for description */
+    margin-bottom: var(--spacing-xl); /* Example margin bottom for description */
+    color: var(--primary-text-color); /* Apply primary text color */
+}
+
+.service-home-hero-intro .text-container button {
+    padding: var(--padding-sm) var(--padding-lg); /* Example padding for button */
+    font-size: var(--font-size-md); /* Example font size for button */
+    background-color: var(--accent-color); /* Example background color for button */
+    color: var(--primary-text-color); /* Example text color for button */
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service-home-hero-intro .text-container button:hover {
+    background-color: darken(var(--accent-color), 10%); /* Darken the button color on hover */
+}
+
+.service-home-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1300px;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Media query for screens up to 1200px */
+@media (min-width: 1200px) {
+    .service-home-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+.service-home-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-home-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-home-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-home-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
