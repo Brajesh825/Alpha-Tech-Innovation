@@ -10,9 +10,19 @@ function ServiceHomeCards(cardsData) {
     return cardsContainer;
 }
 
-function createCard({ title, description }) {
+function createCard({ title, description, bgImage }) {
     const card = document.createElement('div');
     card.classList.add('service-home-card');
+
+    // Create a ::before pseudo-element
+    const cardBefore = document.createElement('div');
+    cardBefore.classList.add('service-home-card-before');
+
+    // Set the background image for the ::before pseudo-element
+    cardBefore.style.backgroundImage = `url('${bgImage}')`;
+
+    const cardContent = document.createElement('div');
+    cardContent.classList.add('service-home-card-content');
 
     const cardTitle = document.createElement('h3');
     cardTitle.textContent = title;
@@ -20,10 +30,16 @@ function createCard({ title, description }) {
     const cardDescription = document.createElement('p');
     cardDescription.textContent = description;
 
-    card.appendChild(cardTitle);
-    card.appendChild(cardDescription);
+    cardContent.appendChild(cardTitle);
+    cardContent.appendChild(cardDescription);
+
+    // Append the ::before pseudo-element and the content to the card
+    card.appendChild(cardBefore);
+    card.appendChild(cardContent);
 
     return card;
 }
+
+
 
 export default ServiceHomeCards;

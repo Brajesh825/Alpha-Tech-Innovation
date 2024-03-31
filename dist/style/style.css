@@ -21,6 +21,7 @@
     /* Heading Font for Light Theme */
     --font-family-body-light: Arial, sans-serif;
     /* Body Font for Light Theme */
+    --card-gradient-light :   linear-gradient(to bottom right, #ffffff, #e9e8f0);
 
     /* Dark Theme */
     --primary-text-color-dark: #fff;
@@ -39,6 +40,7 @@
     /* Heading Font for Dark Theme */
     --font-family-body-dark: 'Roboto', sans-serif;
     /* Body Font for Dark Theme */
+    --card-gradient-dark : linear-gradient(to bottom right, #0e0000, #c4c2d6);
 
     /* Common Variables */
     --font-size-base: 16px;
@@ -197,6 +199,7 @@
     --text-decoration-none: var(--text-decoration-none);
     --font-style-normal: var(--font-style-normal);
     --font-style-italic: var(--font-style-italic);
+    --card-gradient : var(--card-gradient-light);
 }
 
 /* Dark Theme Styles */
@@ -228,6 +231,7 @@
     --text-decoration-none: var(--text-decoration-none);
     --font-style-normal: var(--font-style-normal);
     --font-style-italic: var(--font-style-italic);
+    --card-gradient : var(--card-gradient-dark);
 }
 
 @keyframes fadeIn {
@@ -1024,6 +1028,7 @@ a:hover {
 }
 
 .service-home-card {
+    position: relative;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -1031,6 +1036,27 @@ a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
+    background-color: var(--primary-background-color);
+    background: var(--card-gradient)
+}
+
+/* Style for the ::before pseudo-element */
+.service-home-card-before {
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-size: cover; 
+    background-position: center; 
+    border-radius: inherit; 
+    opacity: 0.2;
+}
+
+.service-home-card-content {
+    position: relative; 
+    z-index: 1; 
 }
 
 .service-home-card:hover {
@@ -1045,5 +1071,5 @@ a:hover {
 .service-home-card p {
     font-size: 16px;
     line-height: 1.5;
-    color: #666;
+    color: var(--primary-text-color)
 }
