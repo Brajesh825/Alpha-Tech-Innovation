@@ -3,11 +3,11 @@ function HeroAlpha(heroContent) {
     const { bgImageLeft, bgImageRight, heroTitle, heroSubtitle, heroDescription, heroButtonText } = heroContent;
 
     const heroSection = document.createElement('section');
-    heroSection.classList.add('hero');
+    heroSection.classList.add('hero-alpha');
 
     // Create content divs for left and right sides
     const contentDivLeft = document.createElement('div');
-    contentDivLeft.classList.add('hero-content', 'hero-content-left');
+    contentDivLeft.classList.add('hero-content', 'hero-alpha-content-left');
 
     // Create a container for text content
     const textContainer = document.createElement('div');
@@ -36,7 +36,7 @@ function HeroAlpha(heroContent) {
 
     // Create content div for the right side (assuming it will be used later)
     const contentDivRight = document.createElement('div');
-    contentDivRight.classList.add('hero-content', 'hero-content-right');
+    contentDivRight.classList.add('hero-content', 'hero-alpha-content-right');
 
     // Set background images
     // contentDivLeft.style.backgroundImage = `url(${bgImageLeft})`;

@@ -1,6 +1,8 @@
 // Component
 import Navbar from "../components/navbar";
-import HeroAlpha from "../components/hero";
+import HeroAlpha from "../components/heroAlpha";
+import HeroBeta from "../components/heroBeta";
+
 
 // Datasets
 import navData from "../datasets/navData";
@@ -15,6 +17,10 @@ import ServiceHomeHeroIntro from "../components/serviceHomeHeroIntro";
 import serviceHomeHeroIntroData from "../datasets/serviceHomeHeroIntroData";
 import ServiceHomeCards from "../components/serviceHomeCards";
 import serviceHomeCardsData from "../datasets/serviceHomeCardsData";
+import IndustryHomeHeroIntro from "../components/industryHomeHeroIntro";
+import industryHomeHeroIntroData from "../datasets/industryHomeHeroIntroData";
+import industryHomeCardsData from "../datasets/industryHomeCardsData";
+import IndustryHomeCards from "../components/industryHomeCards";
 
 function createContainer() {
     const container = document.createElement('div');
@@ -38,10 +44,11 @@ root.appendChild(container)
 function homeHandler() {
     const container = clearContent();
     const components = [
-        HeroAlpha(homeHeroData),
-        Mission(missionData),
+        HeroBeta(homeHeroData),
         ServiceHomeHeroIntro(serviceHomeHeroIntroData),
-        ServiceHomeCards(serviceHomeCardsData)
+        ServiceHomeCards(serviceHomeCardsData),
+        IndustryHomeHeroIntro(industryHomeHeroIntroData),
+        IndustryHomeCards(industryHomeCardsData)
     ];
     components.forEach(component => container.appendChild(component));
 }
@@ -49,7 +56,7 @@ function homeHandler() {
 function aboutHandler() {
     const container = clearContent();
     const components = [
-        HeroAlpha(aboutHeroData)
+        HeroBeta(aboutHeroData)
     ];
     components.forEach(component => container.appendChild(component));
 }
@@ -57,7 +64,7 @@ function aboutHandler() {
 function serviceHandler() {
     const container = clearContent();
     const components = [
-        HeroAlpha(serviceHeroData)
+        HeroBeta(serviceHeroData)
     ];
     components.forEach(component => container.appendChild(component));
 }
@@ -65,7 +72,7 @@ function serviceHandler() {
 function industryHandler() {
     const container = clearContent();
     const components = [
-        HeroAlpha(industryHeroData)
+        HeroBeta(industryHeroData)
     ];
     components.forEach(component => container.appendChild(component));
 }
@@ -73,7 +80,7 @@ function industryHandler() {
 function contactHandler() {
     const container = clearContent();
     const components = [
-        HeroAlpha(contactUsHeroData)
+        HeroBeta(contactUsHeroData)
     ];
     components.forEach(component => container.appendChild(component));
 }

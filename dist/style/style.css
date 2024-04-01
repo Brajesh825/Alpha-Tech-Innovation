@@ -22,6 +22,7 @@
     --font-family-body-light: Arial, sans-serif;
     /* Body Font for Light Theme */
     --card-gradient-light :   linear-gradient(to bottom right, #ffffff, #e9e8f0);
+    --secondary-card-gradient-light :   linear-gradient(to bottom right, #ffffff, #a79cfa);
 
     /* Dark Theme */
     --primary-text-color-dark: #fff;
@@ -41,6 +42,7 @@
     --font-family-body-dark: 'Roboto', sans-serif;
     /* Body Font for Dark Theme */
     --card-gradient-dark : linear-gradient(to bottom right, #0e0000, #c4c2d6);
+    --secondary-card-gradient-dark : linear-gradient(to bottom right, #0e0000, #9789d2);
 
     /* Common Variables */
     --font-size-base: 16px;
@@ -200,6 +202,7 @@
     --font-style-normal: var(--font-style-normal);
     --font-style-italic: var(--font-style-italic);
     --card-gradient : var(--card-gradient-light);
+    --secondary-card-gradient : var(--secondary-card-gradient-light);
 }
 
 /* Dark Theme Styles */
@@ -232,6 +235,7 @@
     --font-style-normal: var(--font-style-normal);
     --font-style-italic: var(--font-style-italic);
     --card-gradient : var(--card-gradient-dark);
+    --secondary-card-gradient : var(--secondary-card-gradient-dark);
 }
 
 @keyframes fadeIn {
@@ -730,7 +734,7 @@ a:hover {
 }
 
 
-.hero {
+.hero-alpha{
     margin-top: 6rem;
     position: relative;
     display: flex;
@@ -747,7 +751,7 @@ a:hover {
     background-position: center; /* Center the background images */
 }
 
-.hero-content-left {
+.hero-alpha-content-left {
     display: flex;
     left: 0;
     background: none;
@@ -757,7 +761,7 @@ a:hover {
     padding: 2rem;
 }
 
-.hero-content-left::before {
+.hero-alpha-content-left::before {
     content: '';
     position: absolute;
     top: 0;
@@ -773,86 +777,86 @@ a:hover {
 }
 
 
-.hero-content-right {
+.hero-alpha-content-right {
     right: 0;
     opacity: 0.15;
     animation: slideInFromRight 1s ease;
 }
 
 @media (max-width: 576px) {
-    .hero {
+    .hero-alpha{
         margin-top: 5rem;
     }
-    .hero-content-left {
+    .hero-alpha-content-left {
         width: 100%;
     }
-    .hero-content-left::before{
+    .hero-alpha-content-left::before{
         background-position: 35% 50%; /* Adjust as needed */
         width: 100vw;
     }
-    .hero-content-right {
+    .hero-alpha-content-right {
         display: none;
     }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
-    .hero {
+    .hero-alpha{
         margin-top: 5rem;
     }
-    .hero-content-left {
+    .hero-alpha-content-left {
         width: 100%;
     }
-    .hero-content-left::before{
+    .hero-alpha-content-left::before{
         background-position: 30% 50%; /* Adjust as needed */
         width: 100vw;
     }
-    .hero-content-right {
+    .hero-alpha-content-right {
         display: none;
     }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-    .hero {
+    .hero-alpha{
         margin-top: 5rem;
     }
 
-    .hero-content-left {
+    .hero-alpha-content-left {
         width: 100%;
         background-position: 8% 50%; /* Adjust as needed */
     }
 
-    .hero-content-left::before{
+    .hero-alpha-content-left::before{
         background-position: 30% 50%; /* Adjust as needed */
         width: 100vw;
     }
 
 
-    .hero-content-right {
+    .hero-alpha-content-right {
         display: none;
     }
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
-    .hero {
+    .hero-alpha{
         margin-top: 5rem;
     }
 
-    .hero-content-left {
+    .hero-alpha-content-left {
         width: 100%;
     }
 
-    .hero-content-left::before{
+    .hero-alpha-content-left::before{
         background-position: 8% 50%; /* Adjust as needed */
         width: 100vw;
     }
 
-    .hero-content-right {
+    .hero-alpha-content-right {
         display: none;
     }
 }
 
 @media (min-width: 1201px) {
-    .hero-content-left::before{
+    .hero-alpha-content-left::before{
         background-position: -5% 50%; /* Adjust as needed */
         width: 50vw;
     }
@@ -860,13 +864,13 @@ a:hover {
 
 
 /* Additional styles for content inside hero-content */
-.hero-content-left .content,
-.hero-content-right .content {
+.hero-alpha-content-left .content,
+.hero-alpha-content-right .content {
     padding: 20px; /* Example padding for content */
     color: #fff; /* Example text color */
 }
 
-.text-container {
+.hero-alpha .text-container {
     animation: slideInFromLeft 2s ease;
     border: 1px solid rgb(242, 250, 242);
     margin-right: 64px; /* Adjust to create space between the container and the right side */
@@ -908,6 +912,103 @@ a:hover {
 .text-container button:hover {
     background-color: darken(var(--accent-color), 10%); /* Darken the button color on hover */
 }
+
+/* hero beta.css */
+.hero-beta {
+    margin-top: 6rem;
+    position: relative;
+    display: flex;
+    height: calc(100vh - 5rem);
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.hero-beta .hero-content {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover; /* Ensure background image covers its container */
+    background-position: center; /* Center the background image */
+}
+
+.hero-beta-content-left {
+    display: flex;
+    background: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hero-beta-content-left-before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: -20% 50%;
+    opacity: 0.12; /* Adjust opacity as needed */
+    z-index: -1;
+    animation: fadeInBG 1s ease;
+}
+
+.hero-beta-content-left-after {
+    content: '';
+    position: absolute;
+    top: 120px;
+    right: 50px;
+    width: 40vw;
+    max-width: 360px;
+    height: 30vh;
+    max-height: 300px;
+    background-size: cover;
+    background-position: -20% 50%;
+    opacity: 0.22; /* Adjust opacity as needed */
+    z-index: -1;
+    animation: fadeInBG 1s ease;
+}
+
+@media (max-width: 576px) {
+    .hero-beta-content-left-after {
+        top: 30px;
+        right: 10px;
+        width: 25vw;
+        max-width: 150px;
+        height: 20vh;
+        max-height: 100px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .hero-beta {
+        margin-top: 5rem;
+    }
+}
+
+.hero-beta-content-left .text-container {
+    animation: slideInFromLeft 2s ease; /* Animation from previous CSS */
+    border: 1px solid rgb(242, 250, 242);
+    margin-right: 64px; /* Adjust to create space between the container and the right side */
+    padding: var(--padding-md); /* Use the desired padding size */
+    box-sizing: border-box;
+    border-radius: var(--border-radius); /* Use the border radius */
+    max-width: 85vw;
+}
+
+
+/* Extra Large Devices (Large Desktops, 1200px and Up) */
+@media (min-width: 1200px) {
+    .hero-beta-content-left .text-container {
+        width: 80rem;
+    }
+}
+
+
+
 
 /* mission.css */
 
@@ -1072,4 +1173,128 @@ a:hover {
     font-size: 16px;
     line-height: 1.5;
     color: var(--primary-text-color)
+}
+
+
+
+.industry-home-hero-intro {
+    padding: 50px 20px;
+    background-color: var(--primary-background-color);
+    text-align: center;
+}
+
+.industry-home-hero-intro .text-container {
+    animation: slideInFromLeft 2s ease;
+    border: 1px solid rgb(242, 250, 242);
+    margin-right: 64px;
+    padding: var(--padding-md);
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    max-width: 85vw;
+    width: 50rem;
+    margin: 0 auto;
+}
+
+/* Extra Large Devices (Large Desktops, 1200px and Up) */
+@media (min-width: 1200px) {
+    .industry-home-hero-intro .text-container {
+        width: 80rem;
+    }
+}
+
+.industry-home-hero-intro .text-container h1 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-text-color);
+}
+
+.industry-home-hero-intro .text-container h2 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-text-color);
+}
+
+.industry-home-hero-intro .text-container p {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-xl);
+    color: var(--primary-text-color);
+}
+
+.industry-home-hero-intro .text-container button {
+    padding: var(--padding-sm) var(--padding-lg);
+    font-size: var(--font-size-md);
+    background-color: var(--accent-color);
+    color: var(--primary-text-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.industry-home-hero-intro .text-container button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+.industry-home-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1300px;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Media query for screens up to 1200px */
+@media (min-width: 1200px) {
+    .industry-home-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+.industry-home-card {
+    display: flex;
+    min-height: 8rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: var(--primary-background-color);
+    background: var(--secondary-card-gradient);
+}
+
+/* Style for the ::before pseudo-element */
+.industry-home-card-before {
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-size: cover; 
+    background-position: center; 
+    border-radius: inherit; 
+    opacity: 0.2;
+}
+
+.industry-home-card-content {
+    position: relative; 
+    z-index: 1; 
+}
+
+.industry-home-card:hover {
+    transform: scale(1.05);
+}
+
+.industry-home-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--secondary-text-color);
 }
