@@ -992,7 +992,7 @@ a:hover {
 .hero-beta-content-left .text-container {
     animation: slideInFromLeft 2s ease; /* Animation from previous CSS */
     border: 1px solid rgb(242, 250, 242);
-    margin-right: 64px; /* Adjust to create space between the container and the right side */
+    margin-right: 0px; /* Adjust to create space between the container and the right side */
     padding: var(--padding-md); /* Use the desired padding size */
     box-sizing: border-box;
     border-radius: var(--border-radius); /* Use the border radius */
