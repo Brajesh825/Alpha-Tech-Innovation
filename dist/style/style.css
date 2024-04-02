@@ -509,10 +509,10 @@ a:hover {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 4rem;
     z-index: 1000;
-    padding: var(--padding-sm) var(--padding);
+    padding: var(--padding-sm) 0rem;
     display: flex;
     align-items: center;
 }
@@ -587,6 +587,7 @@ a:hover {
     }
 
     .hamburger-btn {
+        margin-left: 1rem;
         display: flex;
     }
 
@@ -721,7 +722,7 @@ a:hover {
 
     .navbar-logo {
         position: absolute;
-        right: 3rem;
+        right: 2rem;
         margin-right: 10px;
         /* Adjust margin as needed */
     }
@@ -742,7 +743,7 @@ a:hover {
     overflow: hidden; /* Hide overflowing content */
 }
 
-.hero-content {
+.hero-alpha .hero-content {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -938,7 +939,6 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
 }
 
 .hero-beta-content-left-before {
@@ -981,7 +981,6 @@ a:hover {
         max-height: 100px;
     }
 }
-
 
 @media (max-width: 576px) {
     .hero-beta {
@@ -1297,4 +1296,69 @@ a:hover {
     font-size: 20px;
     margin-bottom: 10px;
     color: var(--secondary-text-color);
+}
+
+
+/* ContentAlpha Component Styles */
+.content-alpha {
+    color: var(--primary-text-color); /* Example primary text color */
+    background-color: var(--primary-background-color); /* Example primary background color */
+    margin: auto;
+    width: 90vw;
+    max-width: 1300px;
+    border: var(--border-width) solid var(--border-color); /* Example border */
+    border-radius: var(--border-radius); /* Example border radius */
+    background-color: var(--primary-background-color); /* Example background color */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-family: var(--font-family-base);
+}
+
+.content-alpha-main {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-md); /* Example margin bottom */
+}
+
+.content-alpha img {
+    max-width: 100%; /* Ensure image does not exceed container width */
+    margin-bottom: var(--spacing-md); /* Example margin bottom */
+}
+
+.content-alpha .notes {
+    flex: 1;
+    display: grid;
+    grid-gap: var(--spacing-md); /* Example gap between notes */
+    padding: 1rem;
+}
+
+.content-alpha .notes .note {
+    padding: var(--padding-md); /* Increased padding for each note */
+    border: var(--border-width) solid var(--border-color); /* Border */
+    border-radius: var(--border-radius); /* Border radius */
+    background-color: var(--secondary-background-color); /* Background color */
+    box-shadow: var(--box-shadow); /* Add box shadow for depth */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.content-alpha .notes .note:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add shadow on hover for interactive effect */
+}
+
+.content-alpha h2,
+.content-alpha h3,
+.content-alpha h4 {
+    color: var(--secondary-text-color); /* Example secondary text color */
+}
+
+@media (max-width: 992px) {
+    .content-alpha {
+        flex-direction: column;
+    }
 }
