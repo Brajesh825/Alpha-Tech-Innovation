@@ -1329,6 +1329,7 @@ a:hover {
 .content-alpha img {
     max-width: 100%; /* Ensure image does not exceed container width */
     margin-bottom: var(--spacing-md); /* Example margin bottom */
+    box-shadow: -12px 12px 0px 0px rgb(212 214 255 / 52%)
 }
 
 .content-alpha .notes {
@@ -1361,4 +1362,62 @@ a:hover {
     .content-alpha {
         flex-direction: column;
     }
+}
+
+.banner-container {
+    position: relative;
+    width: 100vw;
+    height: 25rem;
+    background-color: var(--primary-background-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-alpha{
+    max-width: 600px;
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-background-color);
+    padding: 2rem;
+}
+
+@media (max-width: 992px) {
+    .banner-alpha {
+        max-width: 80vw;
+    }
+}
+
+.banner-alpha h2,
+.banner-alpha p {
+    margin: 10px 0;
+    color: var(--secondary-text-color);
+}
+
+.banner-alpha button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.banner-alpha button:hover {
+    background-color: #e25822;
+}
+
+/* Background Image using ::before */
+.banner-alpha-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 25rem;
+    background-image: url('/image/contact-us-main.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.14; /* Adjust the opacity as needed */
 }

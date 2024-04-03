@@ -23,6 +23,8 @@ import industryHomeCardsData from "../datasets/industryHomeCardsData";
 import IndustryHomeCards from "../components/industryHomeCards";
 import ContentAlpha from "../components/contentSectionAlpha";
 import chooseUsData from "../datasets/chooseUsData";
+import BannerAlpha from "../components/bannerAlpha";
+import contactUsBannerData from "../datasets/contactUsBannerData";
 
 function createContainer() {
     const container = document.createElement('div');
@@ -51,7 +53,8 @@ function homeHandler() {
         ServiceHomeCards(serviceHomeCardsData),
         IndustryHomeHeroIntro(industryHomeHeroIntroData),
         IndustryHomeCards(industryHomeCardsData),
-        ContentAlpha(chooseUsData)
+        ContentAlpha(chooseUsData),
+        BannerAlpha(contactUsBannerData)
     ];
     components.forEach(component => container.appendChild(component));
 }
