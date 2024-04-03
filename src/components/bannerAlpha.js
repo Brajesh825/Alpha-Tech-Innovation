@@ -24,6 +24,8 @@ function BannerAlpha(bannerData) {
     // Create and append a ::before pseudo-element for background image
     const backgroundOverlay = document.createElement('div');
     backgroundOverlay.classList.add('banner-alpha-before');
+    backgroundOverlay.style.backgroundImage = `url('${bannerData.backgroundImage}')`;
+
     bannerContainer.appendChild(backgroundOverlay);
 
     // Append the banner alpha element to the banner container

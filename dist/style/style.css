@@ -21,8 +21,8 @@
     /* Heading Font for Light Theme */
     --font-family-body-light: Arial, sans-serif;
     /* Body Font for Light Theme */
-    --card-gradient-light :   linear-gradient(to bottom right, #ffffff, #e9e8f0);
-    --secondary-card-gradient-light :   linear-gradient(to bottom right, #ffffff, #a79cfa);
+    --card-gradient-light: linear-gradient(to bottom right, #ffffff, #e9e8f0);
+    --secondary-card-gradient-light: linear-gradient(to bottom right, #ffffff, #a79cfa);
 
     /* Dark Theme */
     --primary-text-color-dark: #fff;
@@ -41,8 +41,8 @@
     /* Heading Font for Dark Theme */
     --font-family-body-dark: 'Roboto', sans-serif;
     /* Body Font for Dark Theme */
-    --card-gradient-dark : linear-gradient(to bottom right, #0e0000, #c4c2d6);
-    --secondary-card-gradient-dark : linear-gradient(to bottom right, #0e0000, #9789d2);
+    --card-gradient-dark: linear-gradient(to bottom right, #0e0000, #c4c2d6);
+    --secondary-card-gradient-dark: linear-gradient(to bottom right, #0e0000, #9789d2);
 
     /* Common Variables */
     --font-size-base: 16px;
@@ -201,8 +201,8 @@
     --text-decoration-none: var(--text-decoration-none);
     --font-style-normal: var(--font-style-normal);
     --font-style-italic: var(--font-style-italic);
-    --card-gradient : var(--card-gradient-light);
-    --secondary-card-gradient : var(--secondary-card-gradient-light);
+    --card-gradient: var(--card-gradient-light);
+    --secondary-card-gradient: var(--secondary-card-gradient-light);
 }
 
 /* Dark Theme Styles */
@@ -234,8 +234,8 @@
     --text-decoration-none: var(--text-decoration-none);
     --font-style-normal: var(--font-style-normal);
     --font-style-italic: var(--font-style-italic);
-    --card-gradient : var(--card-gradient-dark);
-    --secondary-card-gradient : var(--secondary-card-gradient-dark);
+    --card-gradient: var(--card-gradient-dark);
+    --secondary-card-gradient: var(--secondary-card-gradient-dark);
 }
 
 @keyframes fadeIn {
@@ -634,35 +634,49 @@ a:hover {
         width: 100%;
         display: block;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-        font-size: 16px; /* Adjust font size as needed */
-        color: #fff; /* Text color */
-        text-decoration: none; /* Remove underline */
-        padding: 10px 20px; /* Padding for spacing */
-        border-radius: 5px; /* Rounded corners */
-        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        font-size: 16px;
+        /* Adjust font size as needed */
+        color: #fff;
+        /* Text color */
+        text-decoration: none;
+        /* Remove underline */
+        padding: 10px 20px;
+        /* Padding for spacing */
+        border-radius: 5px;
+        /* Rounded corners */
+        transition: background-color 0.3s ease;
+        /* Smooth transition for background color */
     }
-    
+
     .navbar.active .navbar-menu a:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
+        background-color: rgba(255, 255, 255, 0.2);
+        /* Semi-transparent background on hover */
     }
 
     .navbar-menu li {
         /* Existing styles */
         border-radius: 0.25rem;
         list-style-type: none;
-        margin-left: var(--spacing-md);   
-        padding: 10px 20px; /* Padding for spacing */
-        border: 2px solid #fff; /* Border */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+        margin-left: var(--spacing-md);
+        padding: 10px 20px;
+        /* Padding for spacing */
+        border: 2px solid #fff;
+        /* Border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Box shadow for depth */
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        /* Smooth transitions */
     }
-    
+
     .navbar-menu li:hover {
-        background-color: #4d4270; /* Darker background color on hover */
-        transform: translateY(-2px); /* Move button slightly upwards on hover */
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover for depth */
+        background-color: #4d4270;
+        /* Darker background color on hover */
+        transform: translateY(-2px);
+        /* Move button slightly upwards on hover */
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        /* Increase box shadow on hover for depth */
     }
-    
+
     .navbar-menu a {
         /* Existing styles */
         color: inherit;
@@ -673,7 +687,7 @@ a:hover {
         /* padding: var(--spacing-sm) var(--spacing-md); */
         /* border-radius: var(--border-radius); */
     }
-    
+
 
 
 }
@@ -735,21 +749,25 @@ a:hover {
 }
 
 
-.hero-alpha{
+.hero-alpha {
     margin-top: 6rem;
     position: relative;
     display: flex;
-    height: calc( 100vh - 5rem ) ;
-    overflow: hidden; /* Hide overflowing content */
+    height: calc(100vh - 5rem);
+    overflow: hidden;
+    /* Hide overflowing content */
 }
 
 .hero-alpha .hero-content {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 50%; /* Each content div takes half of the width */
-    background-size: cover; /* Ensure background images cover their containers */
-    background-position: center; /* Center the background images */
+    width: 50%;
+    /* Each content div takes half of the width */
+    background-size: cover;
+    /* Ensure background images cover their containers */
+    background-position: center;
+    /* Center the background images */
 }
 
 .hero-alpha-content-left {
@@ -772,7 +790,8 @@ a:hover {
     background-image: url('/image/sillhoute.jpg');
     background-size: cover;
     background-position: -20% 50%;
-    opacity: 0.12; /* Adjust opacity as needed */
+    opacity: 0.12;
+    /* Adjust opacity as needed */
     z-index: -1;
     animation: fadeInBG 1s ease;
 }
@@ -785,49 +804,59 @@ a:hover {
 }
 
 @media (max-width: 576px) {
-    .hero-alpha{
+    .hero-alpha {
         margin-top: 5rem;
     }
+
     .hero-alpha-content-left {
         width: 100%;
     }
-    .hero-alpha-content-left::before{
-        background-position: 35% 50%; /* Adjust as needed */
+
+    .hero-alpha-content-left::before {
+        background-position: 35% 50%;
+        /* Adjust as needed */
         width: 100vw;
     }
+
     .hero-alpha-content-right {
         display: none;
     }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
-    .hero-alpha{
+    .hero-alpha {
         margin-top: 5rem;
     }
+
     .hero-alpha-content-left {
         width: 100%;
     }
-    .hero-alpha-content-left::before{
-        background-position: 30% 50%; /* Adjust as needed */
+
+    .hero-alpha-content-left::before {
+        background-position: 30% 50%;
+        /* Adjust as needed */
         width: 100vw;
     }
+
     .hero-alpha-content-right {
         display: none;
     }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-    .hero-alpha{
+    .hero-alpha {
         margin-top: 5rem;
     }
 
     .hero-alpha-content-left {
         width: 100%;
-        background-position: 8% 50%; /* Adjust as needed */
+        background-position: 8% 50%;
+        /* Adjust as needed */
     }
 
-    .hero-alpha-content-left::before{
-        background-position: 30% 50%; /* Adjust as needed */
+    .hero-alpha-content-left::before {
+        background-position: 30% 50%;
+        /* Adjust as needed */
         width: 100vw;
     }
 
@@ -838,7 +867,7 @@ a:hover {
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
-    .hero-alpha{
+    .hero-alpha {
         margin-top: 5rem;
     }
 
@@ -846,8 +875,9 @@ a:hover {
         width: 100%;
     }
 
-    .hero-alpha-content-left::before{
-        background-position: 8% 50%; /* Adjust as needed */
+    .hero-alpha-content-left::before {
+        background-position: 8% 50%;
+        /* Adjust as needed */
         width: 100vw;
     }
 
@@ -857,8 +887,9 @@ a:hover {
 }
 
 @media (min-width: 1201px) {
-    .hero-alpha-content-left::before{
-        background-position: -5% 50%; /* Adjust as needed */
+    .hero-alpha-content-left::before {
+        background-position: -5% 50%;
+        /* Adjust as needed */
         width: 50vw;
     }
 }
@@ -867,43 +898,62 @@ a:hover {
 /* Additional styles for content inside hero-content */
 .hero-alpha-content-left .content,
 .hero-alpha-content-right .content {
-    padding: 20px; /* Example padding for content */
-    color: #fff; /* Example text color */
+    padding: 20px;
+    /* Example padding for content */
+    color: #fff;
+    /* Example text color */
 }
 
 .hero-alpha .text-container {
     animation: slideInFromLeft 2s ease;
     border: 1px solid rgb(242, 250, 242);
-    margin-right: 64px; /* Adjust to create space between the container and the right side */
-    padding: var(--padding-md); /* Use the desired padding size */
+    margin-right: 64px;
+    /* Adjust to create space between the container and the right side */
+    padding: var(--padding-md);
+    /* Use the desired padding size */
     box-sizing: border-box;
-    border-radius: var(--border-radius); /* Use the border radius */
+    border-radius: var(--border-radius);
+    /* Use the border radius */
 }
 
 .text-container h1 {
-    font-size: var(--font-size-xl); /* Example font size for title */
-    margin-bottom: var(--spacing-md); /* Example margin bottom for title */
-    color: var(--primary-text-color); /* Apply primary text color */
+    font-size: var(--font-size-xl);
+    /* Example font size for title */
+    margin-bottom: var(--spacing-md);
+    /* Example margin bottom for title */
+    color: var(--primary-text-color);
+    /* Apply primary text color */
 }
 
 .text-container h2 {
-    font-size: var(--font-size-lg); /* Example font size for subtitle */
-    margin-bottom: var(--spacing-lg); /* Example margin bottom for subtitle */
-    color: var(--primary-text-color); /* Apply primary text color */
+    font-size: var(--font-size-lg);
+    /* Example font size for subtitle */
+    margin-bottom: var(--spacing-lg);
+    /* Example margin bottom for subtitle */
+    color: var(--primary-text-color);
+    /* Apply primary text color */
 }
 
 .text-container p {
-    font-size: var(--font-size-md); /* Example font size for description */
-    line-height: var(--line-height-body); /* Example line height for description */
-    margin-bottom: var(--spacing-xl); /* Example margin bottom for description */
-    color: var(--primary-text-color); /* Apply primary text color */
+    font-size: var(--font-size-md);
+    /* Example font size for description */
+    line-height: var(--line-height-body);
+    /* Example line height for description */
+    margin-bottom: var(--spacing-xl);
+    /* Example margin bottom for description */
+    color: var(--primary-text-color);
+    /* Apply primary text color */
 }
 
 .text-container button {
-    padding: var(--padding-sm) var(--padding-lg); /* Example padding for button */
-    font-size: var(--font-size-md); /* Example font size for button */
-    background-color: var(--accent-color); /* Example background color for button */
-    color: var(--primary-text-color); /* Example text color for button */
+    padding: var(--padding-sm) var(--padding-lg);
+    /* Example padding for button */
+    font-size: var(--font-size-md);
+    /* Example font size for button */
+    background-color: var(--accent-color);
+    /* Example background color for button */
+    color: var(--primary-text-color);
+    /* Example text color for button */
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
@@ -911,7 +961,8 @@ a:hover {
 }
 
 .text-container button:hover {
-    background-color: darken(var(--accent-color), 10%); /* Darken the button color on hover */
+    background-color: darken(var(--accent-color), 10%);
+    /* Darken the button color on hover */
 }
 
 /* hero beta.css */
@@ -920,7 +971,8 @@ a:hover {
     position: relative;
     display: flex;
     height: calc(100vh - 5rem);
-    overflow: hidden; /* Hide overflowing content */
+    overflow: hidden;
+    /* Hide overflowing content */
 }
 
 .hero-beta .hero-content {
@@ -929,8 +981,10 @@ a:hover {
     top: 0;
     bottom: 0;
     left: 0;
-    background-size: cover; /* Ensure background image covers its container */
-    background-position: center; /* Center the background image */
+    background-size: cover;
+    /* Ensure background image covers its container */
+    background-position: center;
+    /* Center the background image */
 }
 
 .hero-beta-content-left {
@@ -950,7 +1004,8 @@ a:hover {
     height: 100vh;
     background-size: cover;
     background-position: -20% 50%;
-    opacity: 0.12; /* Adjust opacity as needed */
+    opacity: 0.12;
+    /* Adjust opacity as needed */
     z-index: -1;
     animation: fadeInBG 1s ease;
 }
@@ -966,7 +1021,8 @@ a:hover {
     max-height: 300px;
     background-size: cover;
     background-position: -20% 50%;
-    opacity: 0.22; /* Adjust opacity as needed */
+    opacity: 0.22;
+    /* Adjust opacity as needed */
     z-index: -1;
     animation: fadeInBG 1s ease;
 }
@@ -989,12 +1045,16 @@ a:hover {
 }
 
 .hero-beta-content-left .text-container {
-    animation: slideInFromLeft 2s ease; /* Animation from previous CSS */
+    animation: slideInFromLeft 2s ease;
+    /* Animation from previous CSS */
     border: 1px solid rgb(242, 250, 242);
-    margin-right: 0px; /* Adjust to create space between the container and the right side */
-    padding: var(--padding-md); /* Use the desired padding size */
+    margin-right: 0px;
+    /* Adjust to create space between the container and the right side */
+    padding: var(--padding-md);
+    /* Use the desired padding size */
     box-sizing: border-box;
-    border-radius: var(--border-radius); /* Use the border radius */
+    border-radius: var(--border-radius);
+    /* Use the border radius */
     max-width: 85vw;
 }
 
@@ -1038,7 +1098,8 @@ a:hover {
     background-image: url('/image/mission-bg.jpg');
     background-size: cover;
     background-position: -20% 50%;
-    opacity: 0.12; /* Adjust opacity as needed */
+    opacity: 0.12;
+    /* Adjust opacity as needed */
     z-index: -1;
     animation: fadeInBG 1s ease;
 }
@@ -1056,15 +1117,20 @@ a:hover {
 }
 
 .service-home-hero-intro .text-container {
-    animation: slideInFromLeft 2s ease; /* Animation from previous CSS */
+    animation: slideInFromLeft 2s ease;
+    /* Animation from previous CSS */
     border: 1px solid rgb(242, 250, 242);
-    margin-right: 64px; /* Adjust to create space between the container and the right side */
-    padding: var(--padding-md); /* Use the desired padding size */
+    margin-right: 64px;
+    /* Adjust to create space between the container and the right side */
+    padding: var(--padding-md);
+    /* Use the desired padding size */
     box-sizing: border-box;
-    border-radius: var(--border-radius); /* Use the border radius */
+    border-radius: var(--border-radius);
+    /* Use the border radius */
     max-width: 85vw;
     width: 50rem;
-    margin: 0 auto; /* Center the content horizontally */
+    margin: 0 auto;
+    /* Center the content horizontally */
 }
 
 
@@ -1077,29 +1143,43 @@ a:hover {
 
 
 .service-home-hero-intro .text-container h1 {
-    font-size: var(--font-size-xl); /* Example font size for title */
-    margin-bottom: var(--spacing-md); /* Example margin bottom for title */
-    color: var(--primary-text-color); /* Apply primary text color */
+    font-size: var(--font-size-xl);
+    /* Example font size for title */
+    margin-bottom: var(--spacing-md);
+    /* Example margin bottom for title */
+    color: var(--primary-text-color);
+    /* Apply primary text color */
 }
 
 .service-home-hero-intro .text-container h2 {
-    font-size: var(--font-size-lg); /* Example font size for subtitle */
-    margin-bottom: var(--spacing-lg); /* Example margin bottom for subtitle */
-    color: var(--primary-text-color); /* Apply primary text color */
+    font-size: var(--font-size-lg);
+    /* Example font size for subtitle */
+    margin-bottom: var(--spacing-lg);
+    /* Example margin bottom for subtitle */
+    color: var(--primary-text-color);
+    /* Apply primary text color */
 }
 
 .service-home-hero-intro .text-container p {
-    font-size: var(--font-size-md); /* Example font size for description */
-    line-height: var(--line-height-body); /* Example line height for description */
-    margin-bottom: var(--spacing-xl); /* Example margin bottom for description */
-    color: var(--primary-text-color); /* Apply primary text color */
+    font-size: var(--font-size-md);
+    /* Example font size for description */
+    line-height: var(--line-height-body);
+    /* Example line height for description */
+    margin-bottom: var(--spacing-xl);
+    /* Example margin bottom for description */
+    color: var(--primary-text-color);
+    /* Apply primary text color */
 }
 
 .service-home-hero-intro .text-container button {
-    padding: var(--padding-sm) var(--padding-lg); /* Example padding for button */
-    font-size: var(--font-size-md); /* Example font size for button */
-    background-color: var(--accent-color); /* Example background color for button */
-    color: var(--primary-text-color); /* Example text color for button */
+    padding: var(--padding-sm) var(--padding-lg);
+    /* Example padding for button */
+    font-size: var(--font-size-md);
+    /* Example font size for button */
+    background-color: var(--accent-color);
+    /* Example background color for button */
+    color: var(--primary-text-color);
+    /* Example text color for button */
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
@@ -1107,7 +1187,8 @@ a:hover {
 }
 
 .service-home-hero-intro .text-container button:hover {
-    background-color: darken(var(--accent-color), 10%); /* Darken the button color on hover */
+    background-color: darken(var(--accent-color), 10%);
+    /* Darken the button color on hover */
 }
 
 .service-home-cards-container {
@@ -1142,21 +1223,21 @@ a:hover {
 
 /* Style for the ::before pseudo-element */
 .service-home-card-before {
-    content: ''; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background-size: cover; 
-    background-position: center; 
-    border-radius: inherit; 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: inherit;
     opacity: 0.2;
 }
 
 .service-home-card-content {
-    position: relative; 
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
 }
 
 .service-home-card:hover {
@@ -1271,21 +1352,21 @@ a:hover {
 
 /* Style for the ::before pseudo-element */
 .industry-home-card-before {
-    content: ''; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background-size: cover; 
-    background-position: center; 
-    border-radius: inherit; 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: inherit;
     opacity: 0.2;
 }
 
 .industry-home-card-content {
-    position: relative; 
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
 }
 
 .industry-home-card:hover {
@@ -1301,14 +1382,19 @@ a:hover {
 
 /* ContentAlpha Component Styles */
 .content-alpha {
-    color: var(--primary-text-color); /* Example primary text color */
-    background-color: var(--primary-background-color); /* Example primary background color */
+    color: var(--primary-text-color);
+    /* Example primary text color */
+    background-color: var(--primary-background-color);
+    /* Example primary background color */
     margin: auto;
     width: 90vw;
     max-width: 1300px;
-    border: var(--border-width) solid var(--border-color); /* Example border */
-    border-radius: var(--border-radius); /* Example border radius */
-    background-color: var(--primary-background-color); /* Example background color */
+    border: var(--border-width) solid var(--border-color);
+    /* Example border */
+    border-radius: var(--border-radius);
+    /* Example border radius */
+    background-color: var(--primary-background-color);
+    /* Example background color */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1323,39 +1409,51 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: var(--spacing-md); /* Example margin bottom */
+    margin-bottom: var(--spacing-md);
+    /* Example margin bottom */
 }
 
 .content-alpha img {
-    max-width: 100%; /* Ensure image does not exceed container width */
-    margin-bottom: var(--spacing-md); /* Example margin bottom */
+    max-width: 100%;
+    /* Ensure image does not exceed container width */
+    margin-bottom: var(--spacing-md);
+    /* Example margin bottom */
     box-shadow: -12px 12px 0px 0px rgb(212 214 255 / 52%)
 }
 
 .content-alpha .notes {
     flex: 1;
     display: grid;
-    grid-gap: var(--spacing-md); /* Example gap between notes */
+    grid-gap: var(--spacing-md);
+    /* Example gap between notes */
     padding: 1rem;
 }
 
 .content-alpha .notes .note {
-    padding: var(--padding-md); /* Increased padding for each note */
-    border: var(--border-width) solid var(--border-color); /* Border */
-    border-radius: var(--border-radius); /* Border radius */
-    background-color: var(--secondary-background-color); /* Background color */
-    box-shadow: var(--box-shadow); /* Add box shadow for depth */
-    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    padding: var(--padding-md);
+    /* Increased padding for each note */
+    border: var(--border-width) solid var(--border-color);
+    /* Border */
+    border-radius: var(--border-radius);
+    /* Border radius */
+    background-color: var(--secondary-background-color);
+    /* Background color */
+    box-shadow: var(--box-shadow);
+    /* Add box shadow for depth */
+    transition: box-shadow 0.3s ease;
+    /* Smooth transition for hover effect */
 }
 
 .content-alpha .notes .note:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add shadow on hover for interactive effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    /* Add shadow on hover for interactive effect */
 }
 
 .content-alpha h2,
 .content-alpha h3,
 .content-alpha h4 {
-    color: var(--secondary-text-color); /* Example secondary text color */
+    color: var(--secondary-text-color);
+    /* Example secondary text color */
 }
 
 @media (max-width: 992px) {
@@ -1375,11 +1473,12 @@ a:hover {
     align-items: center;
 }
 
-.banner-alpha{
-    max-width: 600px;
+.banner-alpha {
+    max-width: 800px;
     color: var(--secondary-text-color);
     background-color: var(--secondary-background-color);
     padding: 2rem;
+    text-align: center;
 }
 
 @media (max-width: 992px) {
@@ -1416,8 +1515,119 @@ a:hover {
     left: 0;
     width: 100vw;
     height: 25rem;
-    background-image: url('/image/contact-us-main.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.14; /* Adjust the opacity as needed */
+    opacity: 0.14;
+    /* Adjust the opacity as needed */
+}
+
+/* Slider Container */
+.alpha-slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.slider-heading {
+    max-width: 800px;
+    text-align: center;
+}
+
+.slider-heading h2 , .slider-heading h3 {
+    color: var(--secondary-text-color);
+}
+
+/* Slide */
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Card */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 380px;
+    /* Adjust the height as needed */
+    overflow: hidden;
+    /* Hide overflow content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 16px;
+    padding: 0.5rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    /* Adjust spacing between paragraphs */
+    overflow: hidden;
+    /* Hide overflow content */
+    text-overflow: ellipsis;
+    /* Show ellipsis for overflow text */
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+    /* Remove bottom margin for last paragraph */
+}
+
+.card p strong {
+    font-weight: bold;
+}
+
+/* Slider Controls */
+.slider-controls {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+
+}
+
+.slides-container{
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+}
+
+.slider-controls button {
+    background-color: #abbfcc; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: background-color 0.3s ease;
+}
+
+.slider-controls button:hover {
+    background-color: #2980b9;
+}
+
+/* Background Image using ::before */
+.slider-alpha-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 35rem;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.04;
+    z-index: -1;
 }

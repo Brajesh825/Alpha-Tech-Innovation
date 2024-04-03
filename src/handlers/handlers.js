@@ -25,6 +25,8 @@ import ContentAlpha from "../components/contentSectionAlpha";
 import chooseUsData from "../datasets/chooseUsData";
 import BannerAlpha from "../components/bannerAlpha";
 import contactUsBannerData from "../datasets/contactUsBannerData";
+import SliderAlpha from "../components/slider/sliderAlpha";
+import testimonialData from "../datasets/testimonialData";
 
 function createContainer() {
     const container = document.createElement('div');
@@ -54,7 +56,8 @@ function homeHandler() {
         IndustryHomeHeroIntro(industryHomeHeroIntroData),
         IndustryHomeCards(industryHomeCardsData),
         ContentAlpha(chooseUsData),
-        BannerAlpha(contactUsBannerData)
+        BannerAlpha(contactUsBannerData),
+        SliderAlpha(testimonialData)
     ];
     components.forEach(component => container.appendChild(component));
 }
