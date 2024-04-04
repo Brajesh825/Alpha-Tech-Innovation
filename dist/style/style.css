@@ -1,5 +1,4 @@
 :root {
-
     /* common */
     --nav-text-color: #ffffff;
     --nav-background-color: #333333;
@@ -23,6 +22,7 @@
     /* Body Font for Light Theme */
     --card-gradient-light: linear-gradient(to bottom right, #ffffff, #e9e8f0);
     --secondary-card-gradient-light: linear-gradient(to bottom right, #ffffff, #a79cfa);
+    --tertiary-card-gradient-light: linear-gradient(to bottom right, #ffffff, #a79cfa);
 
     /* Dark Theme */
     --primary-text-color-dark: #fff;
@@ -43,6 +43,7 @@
     /* Body Font for Dark Theme */
     --card-gradient-dark: linear-gradient(to bottom right, #0e0000, #c4c2d6);
     --secondary-card-gradient-dark: linear-gradient(to bottom right, #0e0000, #9789d2);
+    --tertiary-card-gradient-dark: linear-gradient(to bottom right, #0e0000, #9789d2);
 
     /* Common Variables */
     --font-size-base: 16px;
@@ -203,6 +204,7 @@
     --font-style-italic: var(--font-style-italic);
     --card-gradient: var(--card-gradient-light);
     --secondary-card-gradient: var(--secondary-card-gradient-light);
+    --tertiary-card-gradient: var(--tertiary-card-gradient-light);
 }
 
 /* Dark Theme Styles */
@@ -236,6 +238,7 @@
     --font-style-italic: var(--font-style-italic);
     --card-gradient: var(--card-gradient-dark);
     --secondary-card-gradient: var(--secondary-card-gradient-dark);
+    --tertiary-card-gradient: var(--tertiary-card-gradient-dark);
 }
 
 @keyframes fadeIn {
@@ -1631,3 +1634,90 @@ a:hover {
     opacity: 0.04;
     z-index: -1;
 }
+
+/* FAQ Container */
+.faq-container-alpha {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--padding-lg);
+}
+
+/* FAQ Heading */
+.faq-container-alpha h2 {
+    color: var(--primary-text-color);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--margin-md);
+}
+
+/* FAQ Subtitle */
+.faq-container-alpha h3 {
+    font-size: var(--font-size-lg);
+    color: var(--secondary-text-color);
+    margin-bottom: var(--margin-lg);
+}
+
+/* FAQ Item */
+.faq-item {
+    margin-bottom: var(--margin-md);
+}
+
+/* FAQ Item */
+.faq-item {
+    margin-bottom: var(--margin-md);
+}
+
+/* FAQ Question */
+.faq-item h4 {
+    padding: 0.5rem 0 0.5rem 1rem;
+    border: 1px solid var(--primary-text-color);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: var(--font-size-lg);
+    color: var(--secondary-text-color);
+    margin-bottom: var(--margin-sm);
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.faq-item h4:hover {
+    color: var(--accent-color); /* Change color on hover */
+}
+
+/* FAQ Answer */
+.faq-item .answer {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-body);
+    color: var(--primary-text-color);
+    opacity: 0; /* Initially hide the answer */
+    max-height: 0; /* Initially hide the answer */
+    overflow: hidden; /* Hide overflow content */
+    transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* FAQ Question - Show */
+.faq-item.show h4 {
+    margin: 0;
+    background: var(--tertiary-card-gradient);
+    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)); */
+    border-bottom: 1px solid rgb(223, 203, 203);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+/* FAQ Answer - Show */
+.faq-item.show .answer {
+    margin: 0;
+    opacity: 1; /* Show the answer */
+    padding: 1rem;
+    max-height: 1000px; /* Show the answer */
+    border: 1px solid var(--primary-text-color);
+    border-radius: 0.25rem;
+}
+
+/* Remove top border and border-radius */
+.faq-item.show .answer {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+

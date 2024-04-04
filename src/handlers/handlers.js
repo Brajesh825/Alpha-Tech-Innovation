@@ -3,7 +3,6 @@ import Navbar from "../components/navbar";
 import HeroAlpha from "../components/heroAlpha";
 import HeroBeta from "../components/heroBeta";
 
-
 // Datasets
 import navData from "../datasets/navData";
 import { homeHeroData } from "../datasets/homeData";
@@ -27,6 +26,8 @@ import BannerAlpha from "../components/bannerAlpha";
 import contactUsBannerData from "../datasets/contactUsBannerData";
 import SliderAlpha from "../components/slider/sliderAlpha";
 import testimonialData from "../datasets/testimonialData";
+import FaqAlpha from "../components/faq/faqAlpha";
+import faqData from "../datasets/faqData";
 
 function createContainer() {
     const container = document.createElement('div');
@@ -57,7 +58,8 @@ function homeHandler() {
         IndustryHomeCards(industryHomeCardsData),
         ContentAlpha(chooseUsData),
         BannerAlpha(contactUsBannerData),
-        SliderAlpha(testimonialData)
+        SliderAlpha(testimonialData),
+        FaqAlpha(faqData)
     ];
     components.forEach(component => container.appendChild(component));
 }
