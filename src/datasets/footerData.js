@@ -82,22 +82,22 @@ const footerData = {
             "title": "Get In Touch",
             "links": [
                 {
-                    "icon": "Icon-envelope",
-                    "text": "info@govanator.com",
+                    "icon": "fas fa-envelope",
+                    "text": "info@alphatechinnovation.com",
                     "link": "mailto:info@govanator.com"
                 },
                 {
-                    "icon": "Icon-phone",
-                    "text": "US/Canada: +1 203 220 2294",
-                    "link": "tel:+12032202294"
+                    "icon": "fas fa-phone",
+                    "text": "india: +91 80830 53457",
+                    "link": "tel:+91032202294"
                 },
                 {
-                    "icon": "Icon-location",
+                    "icon": "fas fa-location",
                     "text": "2260 Whitney Ave, Hamden, CT 06518, US",
                     "link": "#"
                 },
                 {
-                    "icon": "Icon-location",
+                    "icon": "fas fa-location",
                     "text": "Delivery Address: H-157, Ground Floor, Sector 63, Noida, Uttar Pradesh 201301",
                     "link": "#"
                 }

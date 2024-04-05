@@ -507,7 +507,8 @@ a:hover {
 
 /* Navbar Styles */
 .navbar {
-    background-color: var(--nav-background-color);
+    /* background-color: var(--nav-background-color); */
+    background:linear-gradient(45deg, black, #431d91);
     color: var(--nav-text-color);
     position: fixed;
     top: 0;
@@ -601,7 +602,7 @@ a:hover {
         align-items: center;
         position: absolute;
         top: 60px;
-        background: linear-gradient(135deg, #292139 0%, #6f608f 100%);
+        background: linear-gradient(218deg, #28262d 0%, #392ec4 100%);
         width: calc(100vw - 40px);
         height: calc(100vh - 80px);
         left: 0;
@@ -1248,6 +1249,7 @@ a:hover {
 }
 
 .service-home-card h3 {
+    color: var(--primary-text-color);
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -1734,7 +1736,7 @@ a:hover {
 
 /* Base Styles */
 .footer-alpha {
-    background: var(--nav-background-color);
+    background: linear-gradient(45deg, black, #431d91a6);
     color: var(--nav-text-color);
     padding: var(--padding-lg);
     text-align: center;
@@ -1753,7 +1755,7 @@ a:hover {
 }
 
 .footer-alpha .footer-logo img {
-    width: 100px;
+    width: 128px;
     height: auto;
 }
 
@@ -1812,6 +1814,11 @@ a:hover {
     margin-bottom: var(--margin-sm);
 }
 
+.footer-alpha .footer-links li i {
+    margin-right: 0.25rem;
+}
+
+
 .footer-alpha .footer-links li a {
     color: var(--nav-text-color);
     text-decoration: none;
@@ -1824,9 +1831,7 @@ a:hover {
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-    .footer-alpha .footer-logo img {
-        width: 80px;
-    }
+ 
 
     .footer-alpha .social-links a {
         font-size: 16px;
