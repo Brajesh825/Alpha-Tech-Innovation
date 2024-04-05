@@ -104,7 +104,7 @@ const footerData = {
             ],
         },
     ],
-    "copyright": "Copyright © 2024 Alphatech Innovation, All rights reserved. Powered by Vanator"
+    "copyright": "Copyright © 2024 Alphatech Innovation, All rights reserved."
 };
 
 export default footerData;

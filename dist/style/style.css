@@ -7,6 +7,7 @@
     --primary-text-color-light: #333;
     --secondary-text-color-light: #555;
     --primary-background-color-light: #fff;
+    --primary-navbar-color-light: #333;
     --secondary-background-color-light: #f5f5f5;
     --accent-color-light: #e67e22;
     --success-color-light: #27ae60;
@@ -28,6 +29,7 @@
     --primary-text-color-dark: #fff;
     --secondary-text-color-dark: #ddd;
     --primary-background-color-dark: #333;
+    --primary-navbar-color-dark: #333;
     --secondary-background-color-dark: #555;
     --accent-color-dark: #d35400;
     --success-color-dark: #2ecc71;
@@ -44,6 +46,29 @@
     --card-gradient-dark: linear-gradient(to bottom right, #0e0000, #c4c2d6);
     --secondary-card-gradient-dark: linear-gradient(to bottom right, #0e0000, #9789d2);
     --tertiary-card-gradient-dark: linear-gradient(to bottom right, #0e0000, #9789d2);
+
+    /* Navy Theme */
+    --primary-text-color-navy: #dad0d0;
+    --secondary-text-color-navy: #ddd;
+    --primary-background-color-navy: #1a1b78e6;
+    --primary-navbar-color-navy: #07224d;
+    --secondary-background-color-navy: #6d986875;
+    --accent-color-navy: #d35400;
+    --success-color-navy: #2ecc71;
+    --error-color-navy: #e74c3c;
+    --warning-color-navy: #f39c12;
+    --info-color-navy: #3498db;
+    --link-color-navy: #3498db;
+    --font-family-base-navy: 'Roboto', sans-serif;
+    /* Base Font for Dark Theme */
+    --font-family-heading-navy: 'Roboto Condensed', sans-serif;
+    /* Heading Font for Dark Theme */
+    --font-family-body-navy: 'Roboto', sans-serif;
+    /* Body Font for Dark Theme */
+    --card-gradient-navy: linear-gradient(to bottom right, #0e0000, #19115b);
+    --secondary-card-gradient-navy: linear-gradient(to bottom right, #0e0000, #9789d2);
+    --tertiary-card-gradient-navy: linear-gradient(to bottom right, #0e0000, #9789d2);
+
 
     /* Common Variables */
     --font-size-base: 16px;
@@ -179,6 +204,7 @@
     --secondary-text-color: var(--secondary-text-color-light);
     --primary-background-color: var(--primary-background-color-light);
     --secondary-background-color: var(--secondary-background-color-light);
+    --primary-navbar-color: var(--primary-navbar-color-light);
     --accent-color: var(--accent-color-light);
     --success-color: var(--success-color-light);
     --error-color: var(--error-color-light);
@@ -213,6 +239,7 @@
     --secondary-text-color: var(--secondary-text-color-dark);
     --primary-background-color: var(--primary-background-color-dark);
     --secondary-background-color: var(--secondary-background-color-dark);
+    --primary-navbar-color: var(--primary-navbar-color-dark);
     --accent-color: var(--accent-color-dark);
     --success-color: var(--success-color-dark);
     --error-color: var(--error-color-dark);
@@ -240,6 +267,43 @@
     --secondary-card-gradient: var(--secondary-card-gradient-dark);
     --tertiary-card-gradient: var(--tertiary-card-gradient-dark);
 }
+
+/* Navy Theme Styles */
+.navy-theme {
+    --primary-text-color: var(--primary-text-color-navy);
+    --secondary-text-color: var(--secondary-text-color-navy);
+    --primary-background-color: var(--primary-background-color-navy);
+    --secondary-background-color: var(--secondary-background-color-navy);
+    --primary-navbar-color: var(--primary-navbar-color-navy);
+    --accent-color: var(--accent-color-navy);
+    --success-color: var(--success-color-navy);
+    --error-color: var(--error-color-navy);
+    --warning-color: var(--warning-color-navy);
+    --info-color: var(--info-color-navy);
+    --link-color: var(--link-color-navy);
+    --font-family-base: var(--font-family-base-navy);
+    --font-family-heading: var(--font-family-heading-navy);
+    --font-family-body: var(--font-family-body-navy);
+    --font-size-heading: var(--font-size-heading);
+    --font-size-body: var(--font-size-body);
+    --font-weight-heading: var(--font-weight-heading);
+    --font-weight-body: var(--font-weight-body);
+    --letter-spacing-heading: var(--letter-spacing-heading);
+    --letter-spacing-body: var(--letter-spacing-body);
+    --line-height-heading: var(--line-height-heading);
+    --line-height-body: var(--line-height-body);
+    --text-transform-uppercase: var(--text-transform-uppercase);
+    --text-transform-none: var(--text-transform-none);
+    --text-decoration-underline: var(--text-decoration-underline);
+    --text-decoration-none: var(--text-decoration-none);
+    --font-style-normal: var(--font-style-normal);
+    --font-style-italic: var(--font-style-italic);
+    --card-gradient: var(--card-gradient-navy);
+    --secondary-card-gradient: var(--secondary-card-gradient-navy);
+    --tertiary-card-gradient: var(--tertiary-card-gradient-navy);
+}
+
+
 
 @keyframes fadeIn {
     from {
@@ -508,7 +572,7 @@ a:hover {
 /* Navbar Styles */
 .navbar {
     /* background-color: var(--nav-background-color); */
-    background:linear-gradient(45deg, black, #431d91);
+    background: var(--primary-navbar-color);
     color: var(--nav-text-color);
     position: fixed;
     top: 0;
@@ -1831,7 +1895,7 @@ a:hover {
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
- 
+
 
     .footer-alpha .social-links a {
         font-size: 16px;
