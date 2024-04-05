@@ -28,6 +28,8 @@ import SliderAlpha from "../components/slider/sliderAlpha";
 import testimonialData from "../datasets/testimonialData";
 import FaqAlpha from "../components/faq/faqAlpha";
 import faqData from "../datasets/faqData";
+import footerData from "../datasets/footerData";
+import footerAlpha from "../components/footer/footerAlpha";
 
 function createContainer() {
     const container = document.createElement('div');
@@ -49,6 +51,10 @@ root.appendChild(container)
 
 // Define route handlers
 function homeHandler() {
+
+    // Scroll to the top
+    window.scrollTo(0, 0);
+
     const container = clearContent();
     const components = [
         HeroBeta(homeHeroData),
@@ -59,41 +65,54 @@ function homeHandler() {
         ContentAlpha(chooseUsData),
         BannerAlpha(contactUsBannerData),
         SliderAlpha(testimonialData),
-        FaqAlpha(faqData)
+        FaqAlpha(faqData),
+        footerAlpha(footerData)
     ];
     components.forEach(component => container.appendChild(component));
 }
 
 function aboutHandler() {
+    // Scroll to the top
+    window.scrollTo(0, 0);
     const container = clearContent();
     const components = [
-        HeroBeta(aboutHeroData)
+        HeroBeta(aboutHeroData),
+        footerAlpha(footerData)
     ];
     components.forEach(component => container.appendChild(component));
 }
 
 function serviceHandler() {
+    // Scroll to the top
+    window.scrollTo(0, 0);
     const container = clearContent();
     const components = [
-        HeroBeta(serviceHeroData)
+        HeroBeta(serviceHeroData),
+        footerAlpha(footerData)
     ];
     components.forEach(component => container.appendChild(component));
 }
 
 function industryHandler() {
+    // Scroll to the top
+    window.scrollTo(0, 0);
     const container = clearContent();
     const components = [
-        HeroBeta(industryHeroData)
+        HeroBeta(industryHeroData),
+        footerAlpha(footerData)
     ];
     components.forEach(component => container.appendChild(component));
 }
 
 function contactHandler() {
+    // Scroll to the top
+    window.scrollTo(0, 0);
     const container = clearContent();
     const components = [
-        HeroBeta(contactUsHeroData)
+        HeroBeta(contactUsHeroData),
+        footerAlpha(footerData)
     ];
     components.forEach(component => container.appendChild(component));
 }
 
-export { homeHandler, aboutHandler , serviceHandler , industryHandler , contactHandler };
+export { homeHandler, aboutHandler, serviceHandler, industryHandler, contactHandler };

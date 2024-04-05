@@ -1538,7 +1538,8 @@ a:hover {
     text-align: center;
 }
 
-.slider-heading h2 , .slider-heading h3 {
+.slider-heading h2,
+.slider-heading h3 {
     color: var(--secondary-text-color);
 }
 
@@ -1600,15 +1601,17 @@ a:hover {
 
 }
 
-.slides-container{
+.slides-container {
     position: relative;
     overflow: hidden;
     max-width: 800px;
 }
 
 .slider-controls button {
-    background-color: #abbfcc; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #abbfcc;
+    /* Button background color */
+    color: #fff;
+    /* Button text color */
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -1675,11 +1678,13 @@ a:hover {
     font-size: var(--font-size-lg);
     color: var(--secondary-text-color);
     margin-bottom: var(--margin-sm);
-    transition: color 0.3s ease; /* Smooth color transition */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
 }
 
 .faq-item h4:hover {
-    color: var(--accent-color); /* Change color on hover */
+    color: var(--accent-color);
+    /* Change color on hover */
 }
 
 /* FAQ Answer */
@@ -1687,10 +1692,14 @@ a:hover {
     font-size: var(--font-size-md);
     line-height: var(--line-height-body);
     color: var(--primary-text-color);
-    opacity: 0; /* Initially hide the answer */
-    max-height: 0; /* Initially hide the answer */
-    overflow: hidden; /* Hide overflow content */
-    transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    opacity: 0;
+    /* Initially hide the answer */
+    max-height: 0;
+    /* Initially hide the answer */
+    overflow: hidden;
+    /* Hide overflow content */
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    /* Smooth transition */
 }
 
 /* FAQ Question - Show */
@@ -1707,9 +1716,11 @@ a:hover {
 /* FAQ Answer - Show */
 .faq-item.show .answer {
     margin: 0;
-    opacity: 1; /* Show the answer */
+    opacity: 1;
+    /* Show the answer */
     padding: 1rem;
-    max-height: 1000px; /* Show the answer */
+    max-height: 1000px;
+    /* Show the answer */
     border: 1px solid var(--primary-text-color);
     border-radius: 0.25rem;
 }
@@ -1721,3 +1732,107 @@ a:hover {
     border-top-right-radius: 0;
 }
 
+/* Base Styles */
+.footer-alpha {
+    background: var(--nav-background-color);
+    color: var(--nav-text-color);
+    padding: var(--padding-lg);
+    text-align: center;
+    /* Center align text */
+}
+
+.footer-alpha h5,
+.footer-alpha h4 {
+    color: var(--nav-text-color);
+}
+
+.footer-alpha .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-alpha .footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-alpha .footer-content {
+    margin-top: var(--margin-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-alpha .footer-content div {
+    flex: 1;
+}
+
+.footer-alpha #footer-title {
+    margin-bottom: var(--margin-md);
+}
+
+.footer-alpha .social-links {
+    margin-bottom: var(--margin-lg);
+}
+
+.footer-alpha .social-links a {
+    margin: 0 var(--margin-sm);
+    /* Even spacing */
+    color: var(--nav-text-color);
+    font-size: 20px;
+    /* Adjust size as needed */
+}
+
+.footer-alpha .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wrap links to new line on smaller screens */
+    justify-content: center;
+    /* Center align on smaller screens */
+    margin-bottom: var(--margin-lg);
+}
+
+.footer-alpha .footer-links>div {
+    flex: 1;
+}
+
+.footer-alpha .footer-links h5 {
+    margin-bottom: var(--margin-md);
+}
+
+.footer-alpha .footer-links ul {
+    text-align: justify;
+    list-style: none;
+    padding: 0;
+    /* Remove default padding */
+}
+
+.footer-alpha .footer-links li {
+    margin-bottom: var(--margin-sm);
+}
+
+.footer-alpha .footer-links li a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+}
+
+.footer-alpha .footer-bottom {
+    margin-top: var(--margin-lg);
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .footer-alpha .footer-logo img {
+        width: 80px;
+    }
+
+    .footer-alpha .social-links a {
+        font-size: 16px;
+    }
+
+    .footer-alpha .footer-links {
+        flex-direction: column;
+    }
+}
