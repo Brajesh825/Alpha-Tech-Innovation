@@ -10,9 +10,13 @@ function IndustryHomeCards(cardsData) {
     return cardsContainer;
 }
 
-function createCard({ title, bgImage }) {
+function createCard({ title, bgImage, link }) {
     const card = document.createElement('div');
     card.classList.add('industry-home-card');
+
+    // Create an anchor tag
+    const anchor = document.createElement('a');
+    anchor.setAttribute('href', link);
 
     // Create a ::before pseudo-element
     const cardBefore = document.createElement('div');
@@ -29,9 +33,12 @@ function createCard({ title, bgImage }) {
 
     cardContent.appendChild(cardTitle);
 
-    // Append the ::before pseudo-element and the content to the card
-    card.appendChild(cardBefore);
-    card.appendChild(cardContent);
+    // Append the ::before pseudo-element and the content to the anchor tag
+    anchor.appendChild(cardBefore);
+    anchor.appendChild(cardContent);
+
+    // Append the anchor tag to the card
+    card.appendChild(anchor);
 
     return card;
 }

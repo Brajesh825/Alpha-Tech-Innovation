@@ -25,6 +25,15 @@ function HeroBeta(heroContent) {
   const connectButton = document.createElement('button');
   connectButton.textContent = heroButtonText;
 
+  // Add click event listener to the button
+  connectButton.addEventListener('click', () => {
+    // Scroll down by 100vh
+    window.scrollBy({
+      top: window.innerHeight, // Scroll down by the height of the viewport
+      behavior: 'smooth' // Smooth scrolling behavior
+    });
+  });
+
   // Append text content and button to the text container
   textContainer.appendChild(title);
   textContainer.appendChild(subtitle);

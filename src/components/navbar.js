@@ -15,7 +15,7 @@ function Navbar(navData, logoSrc) {
 
     // Create logo
     const logo = document.createElement('img');
-    logo.setAttribute('src', "./logo/logo.png");
+    logo.setAttribute('src', "/logo/logo.png");
     logo.setAttribute('alt', 'Logo');
     logo.classList.add('navbar-logo');
     navbar.appendChild(logo);
@@ -85,11 +85,10 @@ function Navbar(navData, logoSrc) {
         }
     });
 
-    // Initially apply a random theme
-    let luck = Math.round(Math.random() * 2); // Random number between 0 and 2
-    if (luck === 1) {
+    let luck = Math.floor(Math.random() * 3); // Random number between 0 and 2
+    if (luck === 0) {
         document.body.classList.add('dark-theme');
-    } else if (luck === 2) {
+    } else if (luck === 1) {
         document.body.classList.add('navy-theme');
     } else {
         document.body.classList.add('light-theme');

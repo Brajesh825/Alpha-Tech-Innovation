@@ -2,7 +2,8 @@
 import homeHandler from "./homeHandler";
 import aboutHandler from "./aboutHandler";
 import serviceHandler from "./serviceHandler";
-import industryHandler from "./industryHandler";
+import industriesHandler from "./industriesHandler";
 import contactHandler from "./contactHandler";
+import industryHandler from "./industryHandler";
 
-export { homeHandler, aboutHandler, serviceHandler, industryHandler, contactHandler };
+export { homeHandler, aboutHandler, serviceHandler, industriesHandler, contactHandler , industryHandler };
