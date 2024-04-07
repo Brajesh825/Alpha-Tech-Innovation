@@ -5,10 +5,9 @@ import footerAlpha from "../components/footer/footerAlpha";
 
 import industiesData from "../datasets/industries/industriesData";
 
-
-import { industryHeroData } from "../datasets/industryData";
 import footerData from "../datasets/footerData";
 import ServiceHomeCards from "../components/serviceHomeCards";
+
 
 function industryHandler(ctx) {
     let id = ctx.params.id
