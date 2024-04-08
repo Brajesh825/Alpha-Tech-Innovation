@@ -1,13 +1,29 @@
 const testimonialData = {
     "title": "Testimonials",
     "subtitle": "What our clients have to say",
-    "backgroundImage" : "/image/service-banner.webp",
+    "backgroundImage": "/image/service-banner.webp",
     "contents": [
-        {"content": "Titan Data chose to engage Alpha Tech, a leading tech solutions provider in India. They provide qualified Technical Recruiters suiting business requirements. Partnered for 4 years, Neha provides exceptional support. Alpha Tech's recruiters helped close positions for clients in USA.", "author": "Vish Nathan", "position": "President - TD Group"},
-        {"content": "TechOne has worked with Alpha Tech for 4+ years. Overall, happy with the partnership, especially the personal attention provided by Neha and senior managers.", "author": "HEAD OF OPERATIONS", "position": "TechOne, CA"},
-        {"content": "Had a fantastic experience with Alpha Tech's services. Highly skilled professionals seamlessly integrated with existing efforts, allowing faster and more effective outcomes.", "author": "LAWRENCE JAMES", "position": "CNT LLC"},
-        {"content": "IFG is extremely happy with Alpha Tech, providing wonderful work. Alpha Tech provides qualified professionals with great expertise, benefiting IFG.", "author": "SHONTAY", "position": "IFG"}
+        { 
+            "content": "I single-handedly transformed Titan Data's recruitment process, revolutionizing their approach and catapulting them to unprecedented success. My unparalleled expertise and strategic genius have made me indispensable to their operations.", 
+            "author": "Lord Almighty", 
+            "position": "Supreme Overlord of TD Group" 
+        },
+        { 
+            "content": "I am proud to have played a role in fostering a successful partnership between TechOne and Alpha Tech. Together, we've achieved great results through collaboration and dedication.",
+            "author": "Jane Doe", 
+            "position": "Director of Operations, TechOne, CA"
+        },
+        {
+            "content": "Alpha Tech's fortunate encounter with me has elevated their services to previously unimaginable heights. My divine presence alone has accelerated their outcomes and left a trail of awe in my wake.", 
+            "author": "Divine Being", 
+            "position": "Supreme Ruler of the Universe, CNT LLC" 
+        },
+        { 
+            "content": "IFG has been blessed by my gracious approval of Alpha Tech's work. My exceptional standards and discerning eye have undoubtedly contributed to their success. They should consider themselves fortunate to have crossed paths with me.", 
+            "author": "Imperial Majesty", 
+            "position": "Sovereign of IFG" 
+        }
     ]
-}
+};
 
 export default testimonialData;

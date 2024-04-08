@@ -8,6 +8,7 @@
     --secondary-text-color-light: #555;
     --primary-background-color-light: #fff;
     --primary-navbar-color-light: #333;
+    --primary-navbar-menu-color-light: linear-gradient(to bottom right, #000000, #74737a);
     --secondary-background-color-light: #f5f5f5;
     --accent-color-light: #e67e22;
     --success-color-light: #27ae60;
@@ -30,6 +31,7 @@
     --secondary-text-color-dark: #ddd;
     --primary-background-color-dark: #333;
     --primary-navbar-color-dark: #333;
+    --primary-navbar-menu-color-dark: linear-gradient(to bottom right, #000000, #74737a);
     --secondary-background-color-dark: #555;
     --accent-color-dark: #d35400;
     --success-color-dark: #2ecc71;
@@ -52,6 +54,7 @@
     --secondary-text-color-navy: #ddd;
     --primary-background-color-navy: #1a1b78e6;
     --primary-navbar-color-navy: #07224d;
+    --primary-navbar-menu-color-navy: linear-gradient(to bottom right, #001479, #766dac);
     --secondary-background-color-navy: #6d986875;
     --accent-color-navy: #d35400;
     --success-color-navy: #2ecc71;
@@ -68,7 +71,6 @@
     --card-gradient-navy: linear-gradient(to bottom right, #0e0000, #19115b);
     --secondary-card-gradient-navy: linear-gradient(to bottom right, #0e0000, #9789d2);
     --tertiary-card-gradient-navy: linear-gradient(to bottom right, #0e0000, #9789d2);
-
 
     /* Common Variables */
     --font-size-base: 16px;
@@ -142,46 +144,6 @@
     --font-size-lg: 18px;
     --font-size-xl: 20px;
 
-    /* Extra Small devices (phones) */
-    --grid-primary-xs-columns: 4;
-    --grid-primary-xs-gutter-width: 10px;
-    --grid-secondary-xs-columns: 3;
-    --grid-secondary-xs-gutter-width: 15px;
-    --grid-tertiary-xs-columns: 2;
-    --grid-tertiary-xs-gutter-width: 20px;
-
-    /* Small devices (landscape phones) */
-    --grid-primary-sm-columns: 6;
-    --grid-primary-sm-gutter-width: 15px;
-    --grid-secondary-sm-columns: 4;
-    --grid-secondary-sm-gutter-width: 20px;
-    --grid-tertiary-sm-columns: 3;
-    --grid-tertiary-sm-gutter-width: 25px;
-
-    /* Medium devices (tablets) */
-    --grid-primary-md-columns: 8;
-    --grid-primary-md-gutter-width: 20px;
-    --grid-secondary-md-columns: 6;
-    --grid-secondary-md-gutter-width: 25px;
-    --grid-tertiary-md-columns: 4;
-    --grid-tertiary-md-gutter-width: 30px;
-
-    /* Large devices (desktops) */
-    --grid-primary-lg-columns: 10;
-    --grid-primary-lg-gutter-width: 25px;
-    --grid-secondary-lg-columns: 6;
-    --grid-secondary-lg-gutter-width: 30px;
-    --grid-tertiary-lg-columns: 4;
-    --grid-tertiary-lg-gutter-width: 30px;
-
-    /* Extra Large devices (large desktops) */
-    --grid-primary-xl-columns: 12;
-    --grid-primary-xl-gutter-width: 30px;
-    --grid-secondary-xl-columns: 8;
-    --grid-secondary-xl-gutter-width: 30px;
-    --grid-tertiary-xl-columns: 4;
-    --grid-tertiary-xl-gutter-width: 30px;
-
     /* Padding */
     --padding-xs: 8px;
     --padding-sm: 16px;
@@ -205,6 +167,7 @@
     --primary-background-color: var(--primary-background-color-light);
     --secondary-background-color: var(--secondary-background-color-light);
     --primary-navbar-color: var(--primary-navbar-color-light);
+    --primary-navbar-menu-color: var(--primary-navbar-menu-color-light);
     --accent-color: var(--accent-color-light);
     --success-color: var(--success-color-light);
     --error-color: var(--error-color-light);
@@ -240,6 +203,7 @@
     --primary-background-color: var(--primary-background-color-dark);
     --secondary-background-color: var(--secondary-background-color-dark);
     --primary-navbar-color: var(--primary-navbar-color-dark);
+    --primary-navbar-menu-color: var(--primary-navbar-menu-color-dark);
     --accent-color: var(--accent-color-dark);
     --success-color: var(--success-color-dark);
     --error-color: var(--error-color-dark);
@@ -275,6 +239,7 @@
     --primary-background-color: var(--primary-background-color-navy);
     --secondary-background-color: var(--secondary-background-color-navy);
     --primary-navbar-color: var(--primary-navbar-color-navy);
+    --primary-navbar-menu-color: var(--primary-navbar-menu-color-navy);
     --accent-color: var(--accent-color-navy);
     --success-color: var(--success-color-navy);
     --error-color: var(--error-color-navy);
@@ -670,7 +635,7 @@ a:hover {
         align-items: center;
         position: absolute;
         top: 60px;
-        background: linear-gradient(218deg, #28262d 0%, #392ec4 100%);
+        background: var(--primary-navbar-menu-color);
         width: calc(100vw - 40px);
         height: calc(100vh - 80px);
         left: 0;
@@ -1804,7 +1769,7 @@ a:hover {
 
 /* Base Styles */
 .footer-alpha {
-    background: linear-gradient(45deg, black, #431d91a6);
+    background: var(--primary-navbar-color);
     color: var(--nav-text-color);
     padding: var(--padding-lg);
     text-align: center;
