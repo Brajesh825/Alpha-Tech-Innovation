@@ -15,6 +15,7 @@ page('/industry/:id', preRender, industryHandler);
 // Error page
 page('*', function (ctx, next) {
     // Render your error page here
+    
     console.error("Page not found:", ctx.path);
 });
 
