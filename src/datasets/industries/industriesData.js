@@ -9,7 +9,7 @@ const industriesData = {
         },
         "services": [
             {
-                "title": "Software Development",
+                "title": "Application Engineering",
                 "description": "Our team of experienced developers creates custom software solutions tailored to your specific business needs. We use cutting-edge technologies and agile methodologies to deliver high-quality software that meets your requirements, on time and within budget.",
                 "bgImage": "/icons/software-development-icon.svg"
             },
