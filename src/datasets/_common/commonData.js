@@ -1,39 +1,49 @@
 const commonData = {
-    "navData" : [
+    "navData": [
         { navItem: 'HOME', link: '/' },
         { navItem: 'ABOUT US', link: '/about-us' },
-        { navItem: 'SERVICES', link: '/services' },
-        { navItem: 'INDUSTRIES', link: '/industries' },
-        { navItem: 'CONTACT US', link: '/contact-us' }
+        { navItem: 'INDUSTRIES', link: '/industries' , dropdowns: [
+            { navItem: 'Industry 1', link: '/industries/service-1' },
+            { navItem: 'Industry 2', link: '/industries/service-2' },
+            { navItem: 'Industry 3', link: '/industries/service-3' }
+        ] },
+        {
+            navItem: 'SERVICES', link: '/services', dropdowns: [
+                { navItem: 'Service 1', link: '/services/service-1' },
+                { navItem: 'Service 2', link: '/services/service-2' },
+                { navItem: 'Service 3', link: '/services/service-3' }
+            ]
+        },
+        { navItem: 'CONTACT US', link: '/contact-us' },
     ],
-    "testimonialData" : {
+    "testimonialData": {
         "title": "Testimonials",
         "subtitle": "What our clients have to say",
         "backgroundImage": "/image/service-banner.webp",
         "contents": [
-            { 
-                "content": "I single-handedly transformed Titan Data's recruitment process, revolutionizing their approach and catapulting them to unprecedented success. My unparalleled expertise and strategic genius have made me indispensable to their operations.", 
-                "author": "Lord Almighty", 
-                "position": "Supreme Overlord of TD Group" 
+            {
+                "content": "I single-handedly transformed Titan Data's recruitment process, revolutionizing their approach and catapulting them to unprecedented success. My unparalleled expertise and strategic genius have made me indispensable to their operations.",
+                "author": "Lord Almighty",
+                "position": "Supreme Overlord of TD Group"
             },
-            { 
+            {
                 "content": "I am proud to have played a role in fostering a successful partnership between TechOne and Alpha Tech. Together, we've achieved great results through collaboration and dedication.",
-                "author": "Jane Doe", 
+                "author": "Jane Doe",
                 "position": "Director of Operations, TechOne, CA"
             },
             {
-                "content": "Alpha Tech's fortunate encounter with me has elevated their services to previously unimaginable heights. My divine presence alone has accelerated their outcomes and left a trail of awe in my wake.", 
-                "author": "Divine Being", 
-                "position": "Supreme Ruler of the Universe, CNT LLC" 
+                "content": "Alpha Tech's fortunate encounter with me has elevated their services to previously unimaginable heights. My divine presence alone has accelerated their outcomes and left a trail of awe in my wake.",
+                "author": "Divine Being",
+                "position": "Supreme Ruler of the Universe, CNT LLC"
             },
-            { 
-                "content": "IFG has been blessed by my gracious approval of Alpha Tech's work. My exceptional standards and discerning eye have undoubtedly contributed to their success. They should consider themselves fortunate to have crossed paths with me.", 
-                "author": "Imperial Majesty", 
-                "position": "Sovereign of IFG" 
+            {
+                "content": "IFG has been blessed by my gracious approval of Alpha Tech's work. My exceptional standards and discerning eye have undoubtedly contributed to their success. They should consider themselves fortunate to have crossed paths with me.",
+                "author": "Imperial Majesty",
+                "position": "Sovereign of IFG"
             }
         ]
     },
-    "faqData" : {
+    "faqData": {
         title: "F. A. Q",
         subtitle: "Frequently Asked Questions",
         contents: [
@@ -54,8 +64,8 @@ const commonData = {
                 answer: "Outsourcing recruitment services  through top RPO firm in USA offers multiple advantages for your business . Firstly, it allows companies to access a vast talent pool, increasing the likelihood of finding the best talent . Secondly, it saves time and resources for the company, as the external provider handles the entire hiring process. Additionally, outsourcing can lead to major cost cutting , as it eliminates the need for in-house recruitment teams who would otherwise turn out to be much expensive as they have several other responsibilities as well apart from recruitment . Moreover, specialized recruitment firms often possess seasoned expertise and market insights that can further enhance the hiring process's effectiveness."
             },
         ]
-    },   
-    "footerData" : {
+    },
+    "footerData": {
         "icon": "/logo/logo.png",
         "title": "Let our expert recruiters bring the right talent your way- connect with us today!",
         "social": [
