@@ -10,5 +10,4 @@ function clearContent() {
     return container;
 }
 
-
 export { createContainer, clearContent }

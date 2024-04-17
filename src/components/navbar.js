@@ -64,35 +64,35 @@ function Navbar(navData, logoSrc) {
     });
 
     // Create theme change button
-    const themeSwapBtn = document.createElement('button');
-    themeSwapBtn.textContent = 'Toggle Theme';
-    themeSwapBtn.classList.add('theme-swap-btn');
-    navbar.appendChild(themeSwapBtn);
+    // const themeSwapBtn = document.createElement('button');
+    // themeSwapBtn.textContent = 'Toggle Theme';
+    // themeSwapBtn.classList.add('theme-swap-btn');
+    // navbar.appendChild(themeSwapBtn);
 
-    // Theme swap button click event to toggle between light, dark, and navy themes
-    themeSwapBtn.addEventListener('click', () => {
-        if (document.body.classList.contains('dark-theme')) {
-            document.body.classList.remove('dark-theme');
-            document.body.classList.add('navy-theme');
-        } else if (document.body.classList.contains('navy-theme')) {
-            document.body.classList.remove('navy-theme');
-            // Add light theme class
-            document.body.classList.add('light-theme');
-        } else {
-            // Remove light theme class
-            document.body.classList.remove('light-theme');
-            document.body.classList.add('dark-theme');
-        }
-    });
+    // // Theme swap button click event to toggle between light, dark, and navy themes
+    // themeSwapBtn.addEventListener('click', () => {
+    //     if (document.body.classList.contains('dark-theme')) {
+    //         document.body.classList.remove('dark-theme');
+    //         document.body.classList.add('navy-theme');
+    //     } else if (document.body.classList.contains('navy-theme')) {
+    //         document.body.classList.remove('navy-theme');
+    //         // Add light theme class
+    //         document.body.classList.add('light-theme');
+    //     } else {
+    //         // Remove light theme class
+    //         document.body.classList.remove('light-theme');
+    //         document.body.classList.add('dark-theme');
+    //     }
+    // });
 
-    let luck = Math.floor(Math.random() * 3); // Random number between 0 and 2
-    if (luck === 0) {
-        document.body.classList.add('dark-theme');
-    } else if (luck === 1) {
-        document.body.classList.add('navy-theme');
-    } else {
-        document.body.classList.add('light-theme');
-    }
+    // let luck = Math.floor(Math.random() * 3); // Random number between 0 and 2
+    // if (luck === 0) {
+    //     document.body.classList.add('dark-theme');
+    // } else if (luck === 1) {
+    //     document.body.classList.add('navy-theme');
+    // } else {
+    //     document.body.classList.add('light-theme');
+    // }
 
     return navbar;
 }
