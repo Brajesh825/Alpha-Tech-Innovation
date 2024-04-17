@@ -2,16 +2,14 @@ import { clearContent } from "./utils/utils";
 
 import HeroBeta from "../components/heroBeta";
 import footerAlpha from "../components/footer/footerAlpha";
-
-import industiesData from "../datasets/industries/industriesData";
-
-import footerData from "../datasets/footerData";
 import ServiceHomeCards from "../components/serviceHomeCards";
 
+import industiesData from "../datasets/industries/industriesData";
+import commonData from "../datasets/_common/commonData";
 
 function industryHandler(ctx) {
     let id = ctx.params.id
-    let currentIndustry = industiesData[id]
+    let currentIndustry = industiesData.industries[id]
 
     const hero = currentIndustry.hero
     const services = currentIndustry.services
@@ -22,7 +20,7 @@ function industryHandler(ctx) {
     const components = [
         HeroBeta(hero),
         ServiceHomeCards(services),
-        footerAlpha(footerData)
+        footerAlpha( commonData. footerData)
     ];
     components.forEach(component => container.appendChild(component));
 }

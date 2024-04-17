@@ -1,6 +1,6 @@
 import { createContainer } from "../utils/utils";
 import Navbar from "../../components/navbar";
-import navData from "../../datasets/navData";
+import commonData from "../../datasets/_common/commonData";
 
 let navbarInstance = null;
 let container = null;
@@ -10,7 +10,7 @@ const preRender = (ctx, next) => {
     const root = document.getElementById("root"); 
     // Check if navbarInstance is null or undefined
     if (!navbarInstance) {
-        navbarInstance = Navbar(navData);
+        navbarInstance = Navbar(commonData.navData);
         root.appendChild(navbarInstance);
     }
 

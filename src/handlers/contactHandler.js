@@ -3,8 +3,8 @@ import { clearContent } from "./utils/utils";
 import HeroBeta from "../components/heroBeta";
 import footerAlpha from "../components/footer/footerAlpha";
 
-import footerData from "../datasets/footerData";
-import { contactUsHeroData } from "../datasets/contactUsData";
+import { contactUsHeroData } from "../datasets/contactUs/contactUsData";
+import commonData from "../datasets/_common/commonData";
 
 function contactHandler() {
     // Scroll to the top
@@ -12,7 +12,7 @@ function contactHandler() {
     const container = clearContent();
     const components = [
         HeroBeta(contactUsHeroData),
-        footerAlpha(footerData)
+        footerAlpha(commonData.footerData)
     ];
     components.forEach(component => container.appendChild(component));
 }

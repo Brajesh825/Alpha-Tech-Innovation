@@ -1,22 +1,21 @@
 import { clearContent } from "./utils/utils";
 
 import HeroBeta from "../components/heroBeta";
-import { serviceHeroData } from "../datasets/serviceData";
-
 import ServiceHomeCards from "../components/serviceHomeCards";
+import footerAlpha from "../components/footer/footerAlpha";
+
 import serviceData from "../datasets/services/serviceData";
 
-import footerAlpha from "../components/footer/footerAlpha";
-import footerData from "../datasets/footerData";
+import commonData from "../datasets/_common/commonData";
 
 function serviceHandler() {
     // Scroll to the top
     window.scrollTo(0, 0);
     const container = clearContent();
     const components = [
-        HeroBeta(serviceHeroData),
-        ServiceHomeCards(serviceData),
-        footerAlpha(footerData)
+        HeroBeta(serviceData.serviceHeroData),
+        ServiceHomeCards(serviceData.services),
+        footerAlpha(commonData.footerData)
     ];
     components.forEach(component => container.appendChild(component));
 }
