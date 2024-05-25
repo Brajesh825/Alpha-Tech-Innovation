@@ -1,7 +1,8 @@
 import { clearContent } from "./utils/utils";
 
 // Components
-import HeroBeta from "../components/heroBeta";
+// import HeroBeta from "../components/heroBeta";
+import HeroGamma from "../components/hero/heroGamma";
 import ServiceHomeHeroIntro from "../components/serviceHomeHeroIntro";
 import ServiceHomeCards from "../components/serviceHomeCards";
 import IndustryHomeHeroIntro from "../components/industryHomeHeroIntro";
@@ -16,6 +17,7 @@ import footerAlpha from "../components/footer/footerAlpha";
 import homeData from "../datasets/home/homeData";
 import commonData from "../datasets/_common/commonData";
 
+
 // Define route handlers
 function homeHandler() {
 
@@ -24,7 +26,8 @@ function homeHandler() {
 
     const container = clearContent();
     const components = [
-        HeroBeta(homeData.homeHeroData),
+        // HeroBeta(homeData.homeHeroData),
+        HeroGamma(homeData.homeHeroData),
         ServiceHomeHeroIntro(homeData.serviceHomeHeroIntroData),
         ServiceHomeCards(homeData.serviceHomeCardsData),
         IndustryHomeHeroIntro(homeData.industryHomeHeroIntroData),

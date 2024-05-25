@@ -1,0 +1,223 @@
+/* General Styles for HeroGamma */
+.hero-gamma {
+    margin-top: 6rem;
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 576px) {
+    .hero-gamma {
+        margin-top: 2rem; /* Adjusted margin-top for mobile devices */
+    }
+}
+
+
+/* Text Container */
+.hero-gamma .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.hero-gamma .text-container h1,
+.hero-gamma .text-container h2 {
+    margin: 0;
+}
+
+.hero-gamma .text-container h1 {
+    font-size: 3rem;
+}
+
+.hero-gamma .text-container h2 {
+    font-size: 2rem;
+}
+
+.hero-gamma .text-container p {
+    font-size: 1.2rem;
+}
+
+.hero-gamma .text-container button {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-gamma .text-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Carousel Container */
+.hero-gamma .carousel-container {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-gamma .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.hero-gamma .carousel-slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Add transition for opacity and transform */
+    position: relative;
+    display: none;
+}
+
+.hero-gamma .carousel-slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.hero-gamma .carousel-slide .slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 576px) {
+    .hero-gamma .carousel-slide .slide-content {
+        width: 80%; /* Adjusted width for mobile devices */
+    }
+}
+
+/* Define a custom animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+      opacity: 1; /* Transition to opacity 1 */
+    }
+  }
+
+.hero-gamma .carousel-slide.active {
+    animation: fadeIn 2s ease forwards;
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+    /* Slide in from the right */
+}
+
+.hero-gamma .carousel-slide.prev {
+    transform: translateX(-100%);
+    /* Slide out to the left */
+}
+
+.hero-gamma .carousel-slide.next {
+    transform: translateX(100%);
+    /* Slide out to the right */
+}
+
+/* Navigation Buttons */
+.hero-gamma .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.hero-gamma .carousel-button-prev {
+    left: 1rem;
+}
+
+.hero-gamma .carousel-button-next {
+    right: 1rem;
+}
+
+.hero-gamma .carousel-button:focus {
+    outline: none;
+}
+
+/* Styles for the heading, subheading, and paragraph within the carousel slide */
+.hero-gamma .carousel-slide .slide-content h1 {
+    color: white;
+    font-size: 3rem; /* Adjust font size for large screens */
+}
+
+.hero-gamma .carousel-slide .slide-content h2 {
+    color: white;
+    font-size: 2rem; /* Adjust font size for large screens */
+}
+
+.hero-gamma .carousel-slide .slide-content p {
+    color: white;
+    font-size: 1.2rem; /* Adjust font size for large screens */
+}
+
+/* Media queries for responsive styling */
+@media (max-width: 768px) {
+    .hero-gamma .carousel-slide .slide-content h1 {
+        font-size: 2rem; /* Adjust font size for medium screens */
+    }
+
+    .hero-gamma .carousel-slide .slide-content h2 {
+        font-size: 1.5rem; /* Adjust font size for medium screens */
+    }
+
+    .hero-gamma .carousel-slide .slide-content p {
+        font-size: 1rem; /* Adjust font size for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-gamma .carousel-slide .slide-content h1 {
+        font-size: 1.5rem; /* Adjust font size for small screens */
+    }
+
+    .hero-gamma .carousel-slide .slide-content h2 {
+        font-size: 1.2rem; /* Adjust font size for small screens */
+    }
+
+    .hero-gamma .carousel-slide .slide-content p {
+        font-size: 0.9rem; /* Adjust font size for small screens */
+    }
+}
+
+/* Button Styles */
+.hero-gamma  button {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.25rem;
+    color: white; /* White font color */
+    background-color: #9d8231; /* Golden background color */
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for background and font color */
+}
+
+.hero-gamma  button:hover {
+    background-color: white; /* White background color on hover */
+    color: #9d8231; /* Golden font color on hover */
+}

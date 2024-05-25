@@ -5,7 +5,30 @@ const homeData = {
         "heroTitle": "Alpha Tech Innovation",
         "heroSubtitle": "Unlocking Talent Galore, Empowering Your Growth",
         "heroDescription": "At Alpha Tech Innovation, we understand the challenges businesses face in finding the right talent. That's why we're dedicated to providing top-notch recruitment services tailored to your company's unique needs. Whether you're a startup, a small business, or a large corporation, we're here to help you build the team you need to succeed.",
-        "heroButtonText": "CONNECT WITH US"
+        "heroButtonText": "CONNECT WITH US",
+        carouselSlides: [
+            {
+              imageSrc: '/image/slider1.jpg',
+              title: 'Alpha Tech Innovation',
+              subtitle: 'Unlocking Talent Galore, Empowering Your Growth',
+              description: "At Alpha Tech Innovation, we understand the challenges businesses face in finding the right talent. That's why we're dedicated to providing top-notch recruitment services tailored to your company's unique needs. Whether you're a startup, a small business, or a large corporation, we're here to help you build the team you need to succeed.",
+              buttonText: 'Learn More'
+            },
+            {
+              imageSrc: '/image/slider2.jpg',
+              title: 'UNITE PEOPLE, PROCESS, AND TECHNOLOGY TO FORGE EXCEPTIONAL DIGITAL TALENT.',
+              subtitle: 'Revolutionize Your Tech Landscape.',
+              description: '',
+              buttonText: 'Learn More'
+            },
+            {
+              imageSrc: '/image/slider3.jpg',
+              title: 'TURN YOUR DATA COMPLEXITY INTO PRO-GROWTH SIMPLICITY.',
+              subtitle: 'Fuel Business Growth with Transformative Insights from Data Engineering and Analytics.',
+              description: 'This is a description for slide 3. It provides more details about the content of this slide.',
+              buttonText: 'Learn More'
+            }
+          ]
     },
     "serviceHomeHeroIntroData": {
         "title": "What We Provide",
