@@ -8,27 +8,34 @@ const homeData = {
         "heroButtonText": "CONNECT WITH US",
         carouselSlides: [
             {
-              imageSrc: '/image/slider1.jpg',
-              title: 'Alpha Tech Innovation',
-              subtitle: 'Unlocking Talent Galore, Empowering Your Growth',
-              description: "At Alpha Tech Innovation, we understand the challenges businesses face in finding the right talent. That's why we're dedicated to providing top-notch recruitment services tailored to your company's unique needs. Whether you're a startup, a small business, or a large corporation, we're here to help you build the team you need to succeed.",
-              buttonText: 'Learn More'
+                imageSrc: '/image/slider1.jpg',
+                title: 'Alpha Tech Innovation',
+                subtitle: 'Unlocking Talent Galore, Empowering Your Growth',
+                description: "At Alpha Tech Innovation, we understand the challenges businesses face in finding the right talent. That's why we're dedicated to providing top-notch recruitment services tailored to your company's unique needs. Whether you're a startup, a small business, or a large corporation, we're here to help you build the team you need to succeed.",
+                buttonText: 'Learn More'
             },
             {
-              imageSrc: '/image/slider2.jpg',
-              title: 'UNITE PEOPLE, PROCESS, AND TECHNOLOGY TO FORGE EXCEPTIONAL DIGITAL TALENT.',
-              subtitle: 'Revolutionize Your Tech Landscape.',
-              description: '',
-              buttonText: 'Learn More'
+                imageSrc: '/image/slider2.jpg',
+                title: 'UNITE PEOPLE, PROCESS, AND TECHNOLOGY TO FORGE EXCEPTIONAL DIGITAL TALENT.',
+                subtitle: 'Revolutionize Your Tech Landscape.',
+                description: '',
+                buttonText: 'Learn More'
             },
             {
-              imageSrc: '/image/slider3.jpg',
-              title: 'TURN YOUR DATA COMPLEXITY INTO PRO-GROWTH SIMPLICITY.',
-              subtitle: 'Fuel Business Growth with Transformative Insights from Data Engineering and Analytics.',
-              description: 'This is a description for slide 3. It provides more details about the content of this slide.',
-              buttonText: 'Learn More'
+                imageSrc: '/image/slider3.jpg',
+                title: 'TURN YOUR DATA COMPLEXITY INTO PRO-GROWTH SIMPLICITY.',
+                subtitle: 'Fuel Business Growth with Transformative Insights from Data Engineering and Analytics.',
+                description: 'This is a description for slide 3. It provides more details about the content of this slide.',
+                buttonText: 'Learn More'
             }
-          ]
+        ]
+    },
+    "aboutUsData": {
+        "imagePath": "/image/sillhoute.jpg",
+        "textAboveImage": "Digital Solutions to Revolutionize Business Operations and Improve Bottomline",
+        "title": "Get To Know Us",
+        "subtitle": "The Alphatech Story",
+        "descriptiveText": "AlphaTech Innovation leads the charge in global technology solutions, spearheading digital transformation with expertise in AI, cloud computing, and automation. Our partnerships with industry giants like Microsoft, SAP, AWS, Tricentis, and Kore.ai ensure the delivery of top-tier solutions across our hubs in the United States, India, UAE, and Europe."
     },
     "serviceHomeHeroIntroData": {
         "title": "What We Provide",
@@ -154,7 +161,7 @@ const homeData = {
             }
         ]
     },
-    "contactUsBannerData" : {
+    "contactUsBannerData": {
         "title": "Igniting Your Company's Potential with the right talent!",
         "subtitle": "Our RPO Experts Redefine Recruitment for an Inspired Workforce and Sustained Growth. We go miles on search for your best fit.",
         "buttonText": "CONTACT US",

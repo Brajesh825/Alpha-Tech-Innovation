@@ -12,6 +12,7 @@ import BannerAlpha from "../components/bannerAlpha";
 import SliderAlpha from "../components/slider/sliderAlpha";
 import FaqAlpha from "../components/faq/faqAlpha";
 import footerAlpha from "../components/footer/footerAlpha";
+import AboutUsAlpha from "../components/aboutUs/aboutUsAlpha";
 
 // Datasets
 import homeData from "../datasets/home/homeData";
@@ -26,8 +27,8 @@ function homeHandler() {
 
     const container = clearContent();
     const components = [
-        // HeroBeta(homeData.homeHeroData),
         HeroGamma(homeData.homeHeroData),
+        AboutUsAlpha(homeData.aboutUsData),
         ServiceHomeHeroIntro(homeData.serviceHomeHeroIntroData),
         ServiceHomeCards(homeData.serviceHomeCardsData),
         IndustryHomeHeroIntro(homeData.industryHomeHeroIntroData),

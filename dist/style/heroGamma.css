@@ -1,5 +1,6 @@
 /* General Styles for HeroGamma */
 .hero-gamma {
+    font-family: "Roboto", sans-serif;
     margin-top: 6rem;
     position: relative;
     width: 100%;
@@ -44,7 +45,8 @@
 }
 
 .hero-gamma .text-container p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    font-weight: 300;
 }
 
 .hero-gamma .text-container button {
@@ -172,7 +174,8 @@
 
 .hero-gamma .carousel-slide .slide-content p {
     color: white;
-    font-size: 1.2rem; /* Adjust font size for large screens */
+    font-size: 1.25rem; /* Adjust font size for large screens */
+    font-weight: 300;
 }
 
 /* Media queries for responsive styling */

@@ -1,0 +1,142 @@
+.about-us-alpha {
+    font-family: "Roboto", sans-serif;
+    padding: 1rem 0;;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    margin: auto;
+}
+
+.section-1-container {
+    padding: 2rem;
+    width: 80%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-section1 {
+    background: #000d0d59;
+    width: 80%;
+    height: 100%;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.about-us-section1  p{
+  color: white;
+  font-size: 2rem;
+  width: 70%;
+}
+
+.section-2-container {
+    padding: 2rem;
+    width: 80%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.section-2-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 10%;
+    border-right: 10px solid #1cbbd5;
+    border-top: 10px solid #fdc115;
+    transition: all .5s;
+}
+
+.section-2-container:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.section-2-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 10%;
+    border-left: 10px solid #1cbbd5;
+    border-bottom: 10px solid #fdc115;
+    transition: all .5s;
+}
+
+.section-2-container:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+
+.background-image {
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-us-section2 {
+    margin-top: 20px; /* Adjust the spacing between sections */
+}
+
+.about-us-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #494040
+}
+
+.about-us-subtitle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #000000
+}
+
+.about-us-text2 {
+    font-size: 1.25rem;
+    font-family: "roboto";
+    font-weight: 300;
+    color: #494040
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 576px) {
+    .about-us-alpha{
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .section-1-container{
+        width: 100%;
+        padding: 0 0 1rem 0 ;
+    }
+
+    .about-us-section1{
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .about-us-section1 p{
+        font-size: 1.25rem;
+    }
+}
