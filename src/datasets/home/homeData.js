@@ -72,7 +72,7 @@ const homeData = {
             "title": "Digital Marketing",
             "description": "Boost your brand visibility and reach your target audience effectively with our digital marketing solutions, including SEO, social media marketing, content creation, and more, tailored to increase your online presence and drive conversions.",
             "bgImage": "/image/services/digital-marketing-services.svg"
-        }
+        },
     ],
     "industryHomeHeroIntroData": {
         "title": "Welcome to Our Industry",

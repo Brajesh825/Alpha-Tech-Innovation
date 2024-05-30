@@ -5,15 +5,20 @@ function AlphaCardSlider(cardsData) {
     const sliderContainer = document.createElement('div');
     sliderContainer.classList.add('alpha-card-slider-container');
 
-    cardsData.forEach(cardData => {
-        console.log(cardData);
-        const card = createAlphaCard(cardData);
-        sliderContainer.appendChild(card);
-    });
-
-    container.appendChild(sliderContainer);
-
+    const cardsToShow = 3;
     let currentIndex = 0;
+
+    function renderCards() {
+        sliderContainer.innerHTML = ''; // Clear previous cards
+        const endIndex = Math.min(currentIndex + cardsToShow, cardsData.length);
+        for (let i = currentIndex; i < endIndex; i++) {
+            const cardData = cardsData[i];
+            const card = createAlphaCard(cardData);
+            sliderContainer.appendChild(card);
+        }
+    }
+
+    renderCards();
 
     const prevButton = document.createElement('button');
     prevButton.classList.add('alpha-slider-nav', 'prev');
@@ -21,7 +26,7 @@ function AlphaCardSlider(cardsData) {
     prevButton.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
-            updateSlider();
+            renderCards();
         }
     });
 
@@ -29,22 +34,20 @@ function AlphaCardSlider(cardsData) {
     nextButton.classList.add('alpha-slider-nav', 'next');
     nextButton.textContent = 'Next';
     nextButton.addEventListener('click', () => {
-        if (currentIndex < Math.ceil(cardsData.length / 3) - 1) {
+        const maxIndex = Math.max(0, cardsData.length - cardsToShow);
+        if (currentIndex < maxIndex) {
             currentIndex++;
-            updateSlider();
+            renderCards();
         }
     });
 
+    container.appendChild(sliderContainer);
     container.appendChild(prevButton);
     container.appendChild(nextButton);
 
-    function updateSlider() {
-        const offset = -currentIndex * 100 / 3;
-        sliderContainer.style.transform = `translateX(${offset}%)`;
-    }
-
     return container;
 }
+
 
 function createAlphaCard({ title, description, bgImage }) {
 
