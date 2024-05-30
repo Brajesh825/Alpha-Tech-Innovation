@@ -233,6 +233,11 @@
     }
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
 
 
 /* Common Styles */
@@ -925,9 +930,11 @@ a:hover {
     padding: 50px 20px;
     background-color: var(--primary-background-color);
     text-align: center;
+    position: relative;
 }
 
 .service-home-hero-intro .text-container {
+    position: relative;
     animation: slideInFromLeft 2s ease;
     /* Animation from previous CSS */
     border: 1px solid rgb(242, 250, 242);
@@ -943,6 +950,43 @@ a:hover {
     margin: 0 auto;
     /* Center the content horizontally */
 }
+
+.service-home-hero-intro .text-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 10%;
+    border-right: 4px solid #1cbbd5;
+    border-top: 4px solid #fdc115;
+    transition: all .5s;
+}
+
+.service-home-hero-intro .text-container:hover::before {
+    width: 20%;
+    height: 20%;
+}
+
+.service-home-hero-intro .text-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 10%;
+    border-left: 4px solid #1cbbd5;
+    border-bottom: 4px solid #fdc115;
+    transition: all .5s;
+}
+
+.service-home-hero-intro .text-container:hover::after {
+    width: 20%;
+    height: 20%;
+}
+
+
+
 
 
 /* Extra Large Devices (Large Desktops, 1200px and Up) */
@@ -980,6 +1024,7 @@ a:hover {
     /* Example margin bottom for description */
     color: var(--primary-text-color);
     /* Apply primary text color */
+    font-weight: 300;
 }
 
 .service-home-hero-intro .text-container button {
@@ -989,7 +1034,8 @@ a:hover {
     /* Example font size for button */
     background-color: var(--accent-color);
     /* Example background color for button */
-    color: var(--primary-text-color);
+    color: white;
+    background-color: #9d8231;
     /* Example text color for button */
     border: none;
     border-radius: var(--border-radius);
