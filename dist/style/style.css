@@ -1118,22 +1118,65 @@ a:hover {
 
 
 .industry-home-hero-intro {
+    margin: auto;
     padding: 50px 20px;
     background-color: var(--primary-background-color);
     text-align: center;
+    position: relative;
+    max-width: 1200px;
 }
 
 .industry-home-hero-intro .text-container {
+    max-width: 1200px;
+    position: relative;
     animation: slideInFromLeft 2s ease;
     border: 1px solid rgb(242, 250, 242);
     margin-right: 64px;
+    /* Adjust to create space between the container and the right side */
     padding: var(--padding-md);
+    /* Use the desired padding size */
     box-sizing: border-box;
     border-radius: var(--border-radius);
-    max-width: 85vw;
-    width: 50rem;
+    /* Use the border radius */
+    max-width: 1200px;
     margin: 0 auto;
+    /* Center the content horizontally */
 }
+
+.industry-home-hero-intro .text-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 10%;
+    border-right: 4px solid #1cbbd5;
+    border-top: 4px solid #fdc115;
+    transition: all .5s;
+}
+
+.industry-home-hero-intro .text-container:hover::before{
+    width: 20%;
+    height: 20%;
+}
+
+.industry-home-hero-intro .text-container::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 10%;
+    border-left: 4px solid #1cbbd5;
+    border-bottom: 4px solid #fdc115;
+    transition: all .5s;
+}
+
+.industry-home-hero-intro .text-container:hover::after{
+    width: 20%;
+    height: 20%;
+}
+
 
 /* Extra Large Devices (Large Desktops, 1200px and Up) */
 @media (min-width: 1200px) {
@@ -1156,24 +1199,35 @@ a:hover {
 
 .industry-home-hero-intro .text-container p {
     font-size: var(--font-size-md);
+    /* Example font size for description */
     line-height: var(--line-height-body);
+    /* Example line height for description */
     margin-bottom: var(--spacing-xl);
-    color: var(--primary-text-color);
+    /* Example margin bottom for description */
+    color: #494040;
+    /* Apply primary text color */
+    font-weight: 300;
+    font-size: 20px;
 }
 
 .industry-home-hero-intro .text-container button {
     padding: var(--padding-sm) var(--padding-lg);
+    /* Example padding for button */
     font-size: var(--font-size-md);
-    background-color: var(--accent-color);
-    color: var(--primary-text-color);
-    border: none;
+    /* Example font size for button */
+    background-color: #9d8231;
+    /* Example background color for button */
+    color: white;
+    /* Example text color for button */
+    border: 2px solid #9d8231;
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .industry-home-hero-intro .text-container button:hover {
-    background-color: darken(var(--accent-color), 10%);
+    background-color:white;
+    color: #9d8231;
 }
 
 .industry-home-cards-container {
@@ -1181,9 +1235,10 @@ a:hover {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-    max-width: 1300px;
+    max-width: 1200px;
     justify-content: center;
     margin: auto;
+    background: azure;
 }
 
 /* Media query for screens up to 1200px */
@@ -1194,8 +1249,8 @@ a:hover {
 }
 
 .industry-home-card {
+    min-height: 200px;
     display: flex;
-    min-height: 8rem;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -1205,10 +1260,48 @@ a:hover {
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Added opacity transition */
     background-color: var(--primary-background-color);
     background: var(--secondary-card-gradient);
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 0.5s forwards; /* Fade-in animation */
 }
+
+.industry-home-card::before {
+    z-index: -10;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    border-right: 2px solid #EF642D;
+    border-bottom: 2px solid #EF642D;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    transition: all 1s;
+}
+
+.industry-home-card:hover::before {
+    width: calc(100% - 2px); /* Subtract border width from 100% */
+    height: calc(100% - 2px); /* Subtract border width from 100% */
+
+}
+
+
+
+/* Animation for increasing border width */
+@keyframes increaseBorderWidth {
+    from {
+        border-width: 0; /* Start with no border */
+    }
+    to {
+        border-width: 1px; /* Increase border width to 1px */
+    }
+}
+
+
 
 /* Style for the ::before pseudo-element */
 .industry-home-card-before {
@@ -1221,7 +1314,7 @@ a:hover {
     background-size: cover;
     background-position: center;
     border-radius: inherit;
-    opacity: 0.2;
+    opacity: 0.5;
 }
 
 .industry-home-card-content {
@@ -1233,11 +1326,26 @@ a:hover {
     transform: scale(1.05);
 }
 
+.industry-home-card:hover .industry-home-card-before {
+    opacity: 0.4; /* Adjust opacity on hover */
+}
+
 .industry-home-card h3 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: var(--secondary-text-color);
+    color: #1f1e1e;
 }
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 
 /* ContentAlpha Component Styles */
