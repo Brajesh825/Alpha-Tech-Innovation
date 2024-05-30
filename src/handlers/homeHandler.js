@@ -17,6 +17,7 @@ import AboutUsAlpha from "../components/aboutUs/aboutUsAlpha";
 // Datasets
 import homeData from "../datasets/home/homeData";
 import commonData from "../datasets/_common/commonData";
+import AlphaCardSlider from "../components/cardSlider/alphaCardSlider";
 
 
 // Define route handlers
@@ -30,7 +31,8 @@ function homeHandler() {
         HeroGamma(homeData.homeHeroData),
         AboutUsAlpha(homeData.aboutUsData),
         ServiceHomeHeroIntro(homeData.serviceHomeHeroIntroData),
-        ServiceHomeCards(homeData.serviceHomeCardsData),
+        // ServiceHomeCards(homeData.serviceHomeCardsData),
+        AlphaCardSlider(homeData.serviceHomeCardsData),
         IndustryHomeHeroIntro(homeData.industryHomeHeroIntroData),
         IndustryHomeCards(homeData.industryHomeCardsData),
         ContentAlpha(homeData.chooseUsData),

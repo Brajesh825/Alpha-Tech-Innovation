@@ -936,7 +936,6 @@ a:hover {
 .service-home-hero-intro .text-container {
     position: relative;
     animation: slideInFromLeft 2s ease;
-    /* Animation from previous CSS */
     border: 1px solid rgb(242, 250, 242);
     margin-right: 64px;
     /* Adjust to create space between the container and the right side */
