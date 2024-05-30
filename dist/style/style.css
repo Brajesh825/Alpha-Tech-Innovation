@@ -927,13 +927,16 @@ a:hover {
 }
 
 .service-home-hero-intro {
+    margin: auto;
     padding: 50px 20px;
     background-color: var(--primary-background-color);
     text-align: center;
     position: relative;
+    max-width: 1200px;
 }
 
 .service-home-hero-intro .text-container {
+    max-width: 1200px;
     position: relative;
     animation: slideInFromLeft 2s ease;
     border: 1px solid rgb(242, 250, 242);
@@ -944,8 +947,7 @@ a:hover {
     box-sizing: border-box;
     border-radius: var(--border-radius);
     /* Use the border radius */
-    max-width: 85vw;
-    width: 50rem;
+    max-width: 1200px;
     margin: 0 auto;
     /* Center the content horizontally */
 }
@@ -1021,9 +1023,10 @@ a:hover {
     /* Example line height for description */
     margin-bottom: var(--spacing-xl);
     /* Example margin bottom for description */
-    color: var(--primary-text-color);
+    color: #494040;
     /* Apply primary text color */
     font-weight: 300;
+    font-size: 20px;
 }
 
 .service-home-hero-intro .text-container button {

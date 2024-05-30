@@ -23,16 +23,27 @@ import AlphaCardSlider from "../components/cardSlider/alphaCardSlider";
 // Define route handlers
 function homeHandler() {
 
-    // Scroll to the top
     window.scrollTo(0, 0);
-
     const container = clearContent();
+
+    const isMobile = window.innerWidth <= 768;
+
+    // Define the variable to hold the chosen component
+    let chosenComponent;
+
+    // Choose the appropriate component based on screen size
+    if (isMobile) {
+        chosenComponent = ServiceHomeCards(homeData.serviceHomeCardsData);
+    } else {
+        chosenComponent = AlphaCardSlider(homeData.serviceHomeCardsData);
+    }
+
+
     const components = [
         HeroGamma(homeData.homeHeroData),
         AboutUsAlpha(homeData.aboutUsData),
         ServiceHomeHeroIntro(homeData.serviceHomeHeroIntroData),
-        // ServiceHomeCards(homeData.serviceHomeCardsData),
-        AlphaCardSlider(homeData.serviceHomeCardsData),
+        chosenComponent,
         IndustryHomeHeroIntro(homeData.industryHomeHeroIntroData),
         IndustryHomeCards(homeData.industryHomeCardsData),
         ContentAlpha(homeData.chooseUsData),
@@ -41,7 +52,16 @@ function homeHandler() {
         FaqAlpha(commonData.faqData),
         footerAlpha(commonData.footerData)
     ];
-    components.forEach(component => container.appendChild(component));
+
+    // Check screen size to determine which component to render
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 768) {
+        const mobileComponents = components.filter(component => !component.classList.contains('hide-on-mobile'));
+        mobileComponents.forEach(component => container.appendChild(component));
+    } else {
+        const desktopComponents = components.filter(component => !component.classList.contains('hide-on-desktop'));
+        desktopComponents.forEach(component => container.appendChild(component));
+    }
 }
 
 export default homeHandler
