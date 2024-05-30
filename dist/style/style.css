@@ -1031,20 +1031,20 @@ a:hover {
     /* Example padding for button */
     font-size: var(--font-size-md);
     /* Example font size for button */
-    background-color: var(--accent-color);
+    background-color: #9d8231;
     /* Example background color for button */
     color: white;
-    background-color: #9d8231;
     /* Example text color for button */
-    border: none;
+    border: 2px solid #9d8231;
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .service-home-hero-intro .text-container button:hover {
-    background-color: darken(var(--accent-color), 10%);
-    /* Darken the button color on hover */
+    background-color:white;
+    color: #9d8231;
+
 }
 
 .service-home-cards-container {

@@ -1,4 +1,5 @@
 .alpha-card-slider {
+    margin: 2rem 0;
     font-family: "roboto";
     position: relative;
     overflow: hidden;
@@ -8,16 +9,29 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    flex-direction: column;
 }
 
+.alpha-card-slider-heading{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.alpha-card-slider-heading h2{
+  color: #494040;
+}
+
+
 .alpha-card-slider-container {
+    padding-top: 1rem;
     display: flex;
     transition: transform 0.5s ease-in-out;
     justify-content: space-between;
 }
 
 .alpha-card {
-    padding: 1rem;
+    flex: 1;
     min-width: 30%;
     box-sizing: border-box;
     display: flex;
@@ -42,6 +56,7 @@
 }
 
 .alpha-card-title {
+    color: #9d8231;
     font-size: 24px;
     margin: 0;
     text-align: center;
@@ -55,19 +70,26 @@
 }
 
 .alpha-slider-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    width: 30px;
+    background: #9d8231;
     color: white;
-    border: none;
+    border: 2px solid #9d8231;
     cursor: pointer;
+    padding: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.alpha-slider-nav:hover {
+    background-color:white;
+    color: #9d8231;
+    border-color: #9d8231;
 }
 
 .alpha-slider-nav.prev {
-    left: 10px;
+    margin-right: 10px;
 }
 
 .alpha-slider-nav.next {
-    right: 10px;
+    margin-left: 10px;
 }

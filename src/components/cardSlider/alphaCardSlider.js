@@ -2,6 +2,39 @@ function AlphaCardSlider(cardsData) {
     const container = document.createElement('div');
     container.classList.add('alpha-card-slider');
 
+ 
+    const sliderHeading = document.createElement('div');
+    sliderHeading.classList.add('alpha-card-slider-heading')
+
+    // Create title element
+    const titleElement = document.createElement('h2');
+    titleElement.textContent = 'Engineering Your Future';
+    sliderHeading.appendChild(titleElement)
+
+
+    container.appendChild(sliderHeading);
+
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('button-container');
+
+    // Create navigation buttons
+    const prevButton = document.createElement('button');
+    prevButton.classList.add('alpha-slider-nav', 'prev');
+    prevButton.textContent = '<';
+    
+    const nextButton = document.createElement('button');
+    nextButton.classList.add('alpha-slider-nav', 'next');
+    nextButton.textContent = '>';
+
+    // Append navigation buttons to container
+
+    // Append buttons to button container
+    buttonContainer.appendChild(prevButton);
+    buttonContainer.appendChild(nextButton);
+
+    sliderHeading.appendChild(buttonContainer);
+
+    // Create slider container
     const sliderContainer = document.createElement('div');
     sliderContainer.classList.add('alpha-card-slider-container');
 
@@ -20,9 +53,6 @@ function AlphaCardSlider(cardsData) {
 
     renderCards();
 
-    const prevButton = document.createElement('button');
-    prevButton.classList.add('alpha-slider-nav', 'prev');
-    prevButton.textContent = 'Prev';
     prevButton.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
@@ -30,9 +60,6 @@ function AlphaCardSlider(cardsData) {
         }
     });
 
-    const nextButton = document.createElement('button');
-    nextButton.classList.add('alpha-slider-nav', 'next');
-    nextButton.textContent = 'Next';
     nextButton.addEventListener('click', () => {
         const maxIndex = Math.max(0, cardsData.length - cardsToShow);
         if (currentIndex < maxIndex) {
@@ -42,11 +69,10 @@ function AlphaCardSlider(cardsData) {
     });
 
     container.appendChild(sliderContainer);
-    container.appendChild(prevButton);
-    container.appendChild(nextButton);
 
     return container;
 }
+
 
 
 function createAlphaCard({ title, description, bgImage }) {
