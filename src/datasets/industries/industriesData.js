@@ -81,32 +81,32 @@ const industriesData = {
                 {
                     "title": "Application Engineering",
                     "description": "Our team of experienced developers creates custom software solutions tailored to your specific business needs. We use cutting-edge technologies and agile methodologies to deliver high-quality software that meets your requirements, on time and within budget.",
-                    "bgImage": "/icons/software-development-icon.svg"
+                    "bgImage": "/image/services/application-engineering.jpeg"
                 },
                 {
                     "title": "Cybersecurity",
                     "description": "Protect your digital assets and sensitive information with our comprehensive cybersecurity solutions and services. From threat detection and prevention to incident response and recovery, we help safeguard your business from cyber threats and vulnerabilities.",
-                    "bgImage": "/icons/cybersecurity-icon.svg"
+                    "bgImage": "/image/services/cyber-security.jpeg"
                 },
                 {
                     "title": "Cloud Computing",
                     "description": "Leverage the power of cloud computing to streamline your IT operations and scale your business efficiently. Our cloud solutions enable you to reduce costs, increase flexibility, and improve productivity by providing on-demand access to computing resources.",
-                    "bgImage": "/icons/cloud-computing-icon.svg"
+                    "bgImage": "/image/services/cloud-computing.avif"
                 },
                 {
                     "title": "Data Analytics",
                     "description": "Unlock valuable insights from your data with our advanced data analytics solutions and services. Our team of data scientists and analysts helps you make informed decisions, optimize performance, and drive innovation by harnessing the power of data.",
-                    "bgImage": "/icons/data-analytics-icon.svg"
+                    "bgImage": "/image/services/data-analytics.jpg"
                 },
                 {
                     "title": "Mobile App Development",
                     "description": "Reach your customers on the go with our high-quality mobile app development services tailored to your business objectives. From native iOS and Android apps to cross-platform solutions, we design and develop mobile applications that engage users and drive results.",
-                    "bgImage": "/icons/mobile-app-development-icon.svg"
+                    "bgImage": "/image/services/app-development.jpg"
                 },
                 {
                     "title": "IT Consulting",
                     "description": "Get expert advice and guidance on IT strategy, implementation, and optimization from our seasoned IT consultants. We work closely with your team to assess your current IT environment, identify opportunities for improvement, and develop a roadmap for success.",
-                    "bgImage": "/icons/it-consulting-icon.svg"
+                    "bgImage": "/image/services/it-consulting.jpg"
                 }
             ]
         },

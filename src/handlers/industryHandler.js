@@ -3,6 +3,9 @@ import { clearContent } from "./utils/utils";
 import HeroBeta from "../components/heroBeta";
 import footerAlpha from "../components/footer/footerAlpha";
 import ServiceHomeCards from "../components/serviceHomeCards";
+import SliderAlpha from "../components/slider/sliderAlpha";
+import FaqAlpha from "../components/faq/faqAlpha";
+
 
 import industiesData from "../datasets/industries/industriesData";
 import commonData from "../datasets/_common/commonData";
@@ -20,6 +23,8 @@ function industryHandler(ctx) {
     const components = [
         HeroBeta(hero),
         ServiceHomeCards(services),
+        SliderAlpha(commonData.testimonialData),
+        FaqAlpha(commonData.faqData),
         footerAlpha( commonData. footerData)
     ];
     components.forEach(component => container.appendChild(component));
