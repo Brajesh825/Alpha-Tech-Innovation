@@ -22,24 +22,24 @@ const commonData = {
         "backgroundImage": "/image/service-banner.webp",
         "contents": [
             {
-                "content": "I single-handedly transformed Titan Data's recruitment process, revolutionizing their approach and catapulting them to unprecedented success. My unparalleled expertise and strategic genius have made me indispensable to their operations.",
-                "author": "Lord Almighty",
-                "position": "Supreme Overlord of TD Group"
+                "content": "Working with Alphatech was a game-changer for our business! Their team's expertise and dedication helped us achieve our goals faster than we ever imagined.",
+                "author": " Jason Smith",
+                "position": "CEO, Talent IT Solutions"
             },
             {
-                "content": "I am proud to have played a role in fostering a successful partnership between TechOne and Alpha Tech. Together, we've achieved great results through collaboration and dedication.",
-                "author": "Jane Doe",
-                "position": "Director of Operations, TechOne, CA"
+                "content": "I can't recommend Alphatech enough! From start to finish, their professionalism and attention to detail were top-notch. They truly went above and beyond to exceed our expectations.",
+                "author": " Jane Thomas ",
+                "position": ""
             },
             {
-                "content": "Alpha Tech's fortunate encounter with me has elevated their services to previously unimaginable heights. My divine presence alone has accelerated their outcomes and left a trail of awe in my wake.",
-                "author": "Divine Being",
-                "position": "Supreme Ruler of the Universe, CNT LLC"
+                "content": "Alphatech has been an invaluable partner for us. Their innovative solutions and exceptional customer service have made a significant impact on our bottom line. We look forward to continuing our partnership for years to come.",
+                "author": "Michael Johnson,",
+                "position": "COO, LMN Enterprises"
             },
             {
-                "content": "IFG has been blessed by my gracious approval of Alpha Tech's work. My exceptional standards and discerning eye have undoubtedly contributed to their success. They should consider themselves fortunate to have crossed paths with me.",
-                "author": "Imperial Majesty",
-                "position": "Sovereign of IFG"
+                "content": "Choosing Alphatech was one of the best decisions we made for our business. Their team not only delivered results but also provided invaluable guidance every step of the way. We couldn't be happier with the outcome!",
+                "author": "Sarah Brown",
+                "position": "Marketing Manager, DEF Inc."
             }
         ]
     },
