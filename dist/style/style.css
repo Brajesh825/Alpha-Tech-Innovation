@@ -737,7 +737,7 @@ a:hover {
     /* Example font size for title */
     margin-bottom: var(--spacing-md);
     /* Example margin bottom for title */
-    color: var(--primary-text-color);
+    color: #333;
     /* Apply primary text color */
 }
 
@@ -746,7 +746,7 @@ a:hover {
     /* Example font size for subtitle */
     margin-bottom: var(--spacing-lg);
     /* Example margin bottom for subtitle */
-    color: var(--primary-text-color);
+    color: #333
     /* Apply primary text color */
 }
 
@@ -757,7 +757,7 @@ a:hover {
     /* Example line height for description */
     margin-bottom: var(--spacing-xl);
     /* Example margin bottom for description */
-    color: var(--primary-text-color);
+    color: #333
     /* Apply primary text color */
 }
 
@@ -768,7 +768,7 @@ a:hover {
     /* Example font size for button */
     background-color: var(--accent-color);
     /* Example background color for button */
-    color: var(--primary-text-color);
+    color: white;
     /* Example text color for button */
     border: none;
     border-radius: var(--border-radius);
@@ -777,7 +777,9 @@ a:hover {
 }
 
 .text-container button:hover {
-    background-color: darken(var(--accent-color), 10%);
+    background-color: white;
+    border: 1px solid goldenrod;
+    color: goldenrod;
     /* Darken the button color on hover */
 }
 
@@ -801,6 +803,7 @@ a:hover {
     /* Ensure background image covers its container */
     background-position: center;
     /* Center the background image */
+    background:  #1f5b4378;
 }
 
 .hero-beta-content-left {
@@ -820,10 +823,8 @@ a:hover {
     height: 100vh;
     background-size: cover;
     background-position: -20% 50%;
-    opacity: 0.12;
-    /* Adjust opacity as needed */
+    opacity: 1;
     z-index: -1;
-    animation: fadeInBG 1s ease;
 }
 
 .hero-beta-content-left-after {
@@ -872,6 +873,7 @@ a:hover {
     border-radius: var(--border-radius);
     /* Use the border radius */
     max-width: 85vw;
+    background: #00dbffc7;
 }
 
 
@@ -1071,7 +1073,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 260px;
+    min-height: 260px;
     position: relative;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -1111,7 +1113,7 @@ a:hover {
 
 
 .service-home-card-content {
-    height: 160px;
+    min-height: 160px;
     position: relative;
     z-index: 1;
 }
