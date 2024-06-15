@@ -18,12 +18,16 @@ function Navbar(navData, logoSrc) {
     `;
     navbar.appendChild(hamburgerBtn);
 
+    // Create a container for logo and ul
+    const navLogoMenuContainer = document.createElement('div');
+    navLogoMenuContainer.classList.add('nav-logo-menu-container');
+
     // Create logo
     const logo = document.createElement('img');
     logo.setAttribute('src', "/logo/logo.png");
     logo.setAttribute('alt', 'Logo');
     logo.classList.add('navbar-logo');
-    navbar.appendChild(logo);
+    navLogoMenuContainer.appendChild(logo);
 
     // Create menu ul
     const ul = document.createElement('ul');
@@ -52,7 +56,8 @@ function Navbar(navData, logoSrc) {
         ul.appendChild(li);
     });
 
-    navbar.appendChild(ul);
+    navLogoMenuContainer.appendChild(ul);
+    navbar.appendChild(navLogoMenuContainer);
 
     // Add event listener for hamburger button
     hamburgerBtn.addEventListener('click', () => {

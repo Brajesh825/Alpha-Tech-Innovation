@@ -48,21 +48,37 @@ const commonData = {
         subtitle: "Frequently Asked Questions",
         contents: [
             {
-                question: "What are RPO companies?",
-                answer: "All the offshore recruiters in USA in current time are competitive and evolving each day to provide their clients with improved results. These offshore recruiters in USA are specialized companies that offer Recruitment Process Outsourcing services to other organizations. They handle various aspects of the recruitment process, from sourcing and screening to candidate selection. They are responsible for all recruitment related services for any business."
+                "question": "What types of IT services do you offer?",
+                "answer": "We offer a wide range of IT services including software development, IT consulting, cloud computing, cybersecurity services, data management, and analytics. Our comprehensive IT solutions are designed to meet the diverse needs of businesses across various industries."
             },
             {
-                question: "What is the difference between RPO, BPO & KPO?",
-                answer: "Recruitment firms involve outsourcing the entire recruitment process to an external service provider . It focuses on sourcing and hiring the right talent. BPO Industry, on the other hand, involves outsourcing specific business processes, such as customer service or accounting, to external providers for improved efficiency and cost savings. KPO involves deep domain knowledge exchange and intricate information transfer as per the requirements."
+                "question": "How can your IT services benefit my business?",
+                "answer": "Our IT services can benefit your business by enhancing efficiency, improving security, and driving innovation. By leveraging our expertise in technology, we help businesses streamline their operations, protect their digital assets, and stay competitive in the market."
             },
             {
-                question: "What is RPO and US staffing ?",
-                answer: "RPO stands for Recruitment Process Outsourcing, where a company entrusts its entire recruitment process or a part of it to an external service provider rather than doing it internally for better talent acquisition . This includes sourcing, screening, and hiring candidates. US staffing, on the other hand, refers to the process of recruiting individuals to work in the United States, typically involving compliance with US labor laws and regulations. This also includes sourcing candidates, conducting interviews, but ensuring compliance with US labor laws and regulations during the hiring process."
+                "question": "What is included in your cybersecurity services?",
+                "answer": "Our cybersecurity services include threat detection and prevention, incident response and recovery, vulnerability assessments, penetration testing, and compliance management. We aim to protect your business from cyber threats and ensure the security of your data and systems."
             },
             {
-                question: "What are the advantage of outsourcing the recruitment services?",
-                answer: "Outsourcing recruitment services  through top RPO firm in USA offers multiple advantages for your business . Firstly, it allows companies to access a vast talent pool, increasing the likelihood of finding the best talent . Secondly, it saves time and resources for the company, as the external provider handles the entire hiring process. Additionally, outsourcing can lead to major cost cutting , as it eliminates the need for in-house recruitment teams who would otherwise turn out to be much expensive as they have several other responsibilities as well apart from recruitment . Moreover, specialized recruitment firms often possess seasoned expertise and market insights that can further enhance the hiring process's effectiveness."
+                "question": "Can you provide customized software solutions?",
+                "answer": "Yes, we specialize in providing customized software solutions tailored to your specific business needs. Our team of experienced developers works closely with you to understand your requirements and deliver software that enhances your business processes and performance."
             },
+            {
+                "question": "What are the advantages of using cloud computing services?",
+                "answer": "Cloud computing services offer several advantages including scalability, cost savings, flexibility, and enhanced collaboration. By using our cloud services, you can easily scale your IT resources up or down based on your needs, reduce infrastructure costs, and improve accessibility and collaboration among your teams."
+            },
+            {
+                "question": "How do you ensure data security and compliance?",
+                "answer": "We ensure data security and compliance by implementing robust security measures and following industry best practices. Our data management services include encryption, access controls, regular security audits, and compliance with relevant regulations such as GDPR and HIPAA."
+            },
+            {
+                "question": "What is your approach to IT consulting?",
+                "answer": "Our IT consulting approach involves understanding your business goals and challenges, assessing your current IT infrastructure, and providing strategic recommendations to optimize your technology investments. We work with you to develop and implement IT strategies that align with your business objectives."
+            },
+            {
+                "question": "How do your data management and analytics services work?",
+                "answer": "Our data management and analytics services include data collection, storage, cleaning, preparation, analysis, and visualization. We use advanced tools and techniques to transform your data into actionable insights, helping you make informed decisions and drive business growth."
+            }
         ]
     },
     "footerData": {
