@@ -107,35 +107,6 @@ const commonData = {
             }
         ],
         "links": [
-            // {
-            //     "title": "Important Links",
-            //     "links": [
-            //         {
-            //             "value": "Top RPO Companies in World",
-            //             "link": "#"
-            //         },
-            //         {
-            //             "value": "Best IT Recruiters in USA",
-            //             "link": "#"
-            //         },
-            //         {
-            //             "value": "Best Non-IT Recruiter in USA",
-            //             "link": "#"
-            //         },
-            //         {
-            //             "value": "Recruitment Process in USA",
-            //             "link": "#"
-            //         },
-            //         {
-            //             "value": "Best RPO Services in USA",
-            //             "link": "#"
-            //         },
-            //         {
-            //             "value": "Top RPO Agency in USA",
-            //             "link": "#"
-            //         }
-            //     ],
-            // },
             {
                 "title": "About Company",
                 "links": [
