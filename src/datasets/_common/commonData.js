@@ -95,7 +95,7 @@ const commonData = {
             },
             {
                 "icon": "fab fa-linkedin",
-                "link": "https://www.linkedin.com"
+                "link": "https://www.linkedin.com/company/alphatech-innovation"
             },
             {
                 "icon": "fab fa-instagram",
@@ -142,12 +142,17 @@ const commonData = {
                     },
                     {
                         "icon": "fas fa-phone",
-                        "text": "india: +91 80830 53457",
+                        "text": "India: +91 80830 53457",
                         "link": "tel:+91032202294"
                     },
                     {
+                        "icon": "fas fa-phone",
+                        "text": "Us: 3023305496",
+                        "link": "tel:3023305496"
+                    },
+                    {
                         "icon": "fas fa-location",
-                        "text": "2260 Whitney Ave, Hamden, CT 06518, US",
+                        "text": "16192 Coastal, Highway,Lewes,Delaware, 19958 , US",
                         "link": "#"
                     },
                     {
