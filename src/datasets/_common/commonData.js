@@ -152,7 +152,7 @@ const commonData = {
                     },
                     {
                         "icon": "fas fa-location",
-                        "text": "16192 Coastal, Highway,Lewes,Delaware, 19958 , US",
+                        "text": "16192 Coastal, Highway, Lewes, Delaware, 19958 , US",
                         "link": "#"
                     },
                     {
